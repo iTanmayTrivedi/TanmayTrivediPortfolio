@@ -9,12 +9,6 @@ import { Github, Linkedin } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import BrandLogo from "@/components/BrandLogo";
 
-const XIcon = ({ size = 20 }: { size?: number }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-  </svg>
-);
-
 const LineIcon = ({ size = 20 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
     <path d="M12 1C5.8 1 .8 5.1.8 10.2c0 4.5 4 8.3 9.4 9-.4.1.3.7.3 1v1.7c0 .5.3.8.7.8.2 0 .4-.1.7-.2 1.2-.7 6.5-3.8 8.9-6.5 1.6-1.8 2.4-3.6 2.4-5.8C23.2 5.1 18.2 1 12 1zM8.3 12.7H6.5c-.3 0-.5-.2-.5-.5V8.1c0-.3.2-.5.5-.5s.5.2.5.5v3.6h1.3c.3 0 .5.2.5.5s-.2.5-.5.5zm2.1-.5c0 .3-.2.5-.5.5s-.5-.2-.5-.5V8.1c0-.3.2-.5.5-.5s.5.2.5.5v4.1zm5 0c0 .2-.1.4-.3.5-.1 0-.1.1-.2.1-.1 0-.3-.1-.4-.2L12.2 9.8v2.4c0 .3-.2.5-.5.5s-.5-.2-.5-.5V8.1c0-.2.1-.4.3-.5.1 0 .3 0 .5.1l2.4 2.8V8.1c0-.3.2-.5.5-.5s.5.2.5.5v4.1zm3.1-2.6c.3 0 .5.2.5.5s-.2.5-.5.5h-1.3v1h1.3c.3 0 .5.2.5.5s-.2.5-.5.5h-1.8c-.3 0-.5-.2-.5-.5V8.1c0-.3.2-.5.5-.5h1.8c.3 0 .5.2.5.5s-.2.5-.5.5h-1.3v1h1.3z" />
@@ -24,7 +18,6 @@ const LineIcon = ({ size = 20 }: { size?: number }) => (
 const socialLinks = [
   { name: "GitHub", icon: Github, href: "https://github.com/itanmaytrivedi", size: 18 },
   { name: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/in/itanmaytrivedi", size: 18 },
-  { name: "X", icon: XIcon, href: "https://x.com/iTanmayTrivedi", size: 18 },
   { name: "LINE", icon: LineIcon, href: "https://line.me/ti/p/bK65DKm_vR", size: 22 },
 ];
 
@@ -75,7 +68,7 @@ const Header = () => {
         <BrandLogo />
 
         {/* Desktop Navigation Links */}
-        <div className="hidden md:flex items-center gap-12 font-semibold">
+        <div className="hidden lg:flex items-center gap-12 font-semibold">
           {navItems.map((item, index) => (
             <motion.a
               key={item.key}
@@ -110,7 +103,7 @@ const Header = () => {
         {/* Desktop CTA Button */}
         <motion.a
           href="#contact"
-          className="hidden md:flex items-center gap-3 group"
+          className="hidden lg:flex items-center gap-3 group"
           whileHover={{ x: 5 }}
         >
           <span className="text-sm tracking-wide">{t("nav.startProject")}</span>
@@ -139,7 +132,7 @@ const Header = () => {
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
             <motion.button
-              className="md:hidden btn-circle flex items-center justify-center"
+              className="lg:hidden btn-circle flex items-center justify-center"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               aria-label="Open menu"
@@ -178,7 +171,7 @@ const Header = () => {
                   <motion.button
                     key={item.key}
                     onClick={() => handleNavClick(item.key)}
-                    className="group text-left py-3 border-b border-foreground/10 flex items-center justify-between"
+                    className={`group text-left py-3 flex items-center justify-between ${index === navItems.length - 1 ? "" : "border-b border-foreground/10"}`}
                     initial={{ opacity: 0, x: 40 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.1 + index * 0.08, type: "spring", stiffness: 200, damping: 20 }}
@@ -242,26 +235,6 @@ const Header = () => {
                     </motion.a>
                   ))}
                 </motion.div>
-
-                <motion.a
-                  href="#contact"
-                  onClick={() => setIsOpen(false)}
-                  className="group flex items-center justify-between bg-foreground text-background px-6 py-5 rounded-none"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.6, type: "spring", stiffness: 200, damping: 20 }}
-                  whileTap={{ scale: 0.97 }}
-                >
-                  <span className="text-lg font-semibold tracking-wide">{t("nav.startProject")}</span>
-                  <motion.div
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                  >
-                    <svg width="16" height="16" viewBox="0 0 12 12" fill="none">
-                      <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="1.5"/>
-                    </svg>
-                  </motion.div>
-                </motion.a>
               </div>
             </div>
           </SheetContent>

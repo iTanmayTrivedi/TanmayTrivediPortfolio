@@ -12,8 +12,10 @@ const AnimatedName = () => {
       <h2
         className="leading-[1.05] whitespace-nowrap text-center pb-6 select-none"
         style={{
-          fontFamily: '"Homemade Apple", "Snell Roundhand", "Apple Chancery", cursive',
+          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif',
           fontSize: 'clamp(3.5rem, 14vw, 16rem)',
+          fontWeight: 700,
+          letterSpacing: '0',
         }}
       >
         <motion.span

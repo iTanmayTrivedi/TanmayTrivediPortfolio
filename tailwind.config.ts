@@ -51,6 +51,16 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        apple: {
+          gray: "hsl(var(--apple-gray))",
+        },
+        yuki: {
+          ink: "hsl(var(--yuki-ink))",
+        },
+      },
+      boxShadow: {
+        "yuki-soft": "0 24px 70px -42px hsl(var(--foreground) / 0.28)",
+        "yuki-chat": "0 18px 44px -30px hsl(var(--foreground) / 0.42)",
       },
       borderRadius: {
         lg: "var(--radius)",
