@@ -27,7 +27,7 @@ export interface ProjectData {
   coreCapabilities: string[];
   screenshots: string[];
   metrics?: { value: string; label: string }[];
-  videoUrl: string;
+  videoUrl?: string;
   liveUrl: string;
   githubUrl: string;
   architecturalDiagram: { components: { name: string; description: string }[]; flow: string[] };

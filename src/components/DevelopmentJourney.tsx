@@ -20,14 +20,13 @@ interface Project {
 }
 
 const projects: Project[] = [
-  { en: "Internal Company Management System", ja: "社内管理システム", date: "2023 · Mar", pills: [{ label: "System", tone: "blue" }, { label: "Backend", tone: "blue" }] },
-  { en: "Appointment & Reservation System", ja: "予約・受付管理システム", date: "2023 · Aug", pills: [{ label: "System", tone: "blue" }, { label: "Real-time", tone: "red" }] },
-  { en: "E-commerce Admin Dashboard", ja: "EC管理ダッシュボード", date: "2024 · Jan", pills: [{ label: "Frontend", tone: "purple" }, { label: "Backend", tone: "blue" }] },
-  { en: "Multilingual SaaS Platform", ja: "多言語SaaSプラットフォーム", date: "2024 · Jun", pills: [{ label: "i18n", tone: "purple" }, { label: "SaaS", tone: "blue" }] },
-  { en: "System Monitoring & Log Dashboard", ja: "監視・ログダッシュボード", date: "2024 · Oct", pills: [{ label: "Real-time", tone: "red" }, { label: "Performance", tone: "red" }] },
-  { en: "Japan Career Path Platform", ja: "日本就職支援プラットフォーム", date: "2025 · Feb", pills: [{ label: "AI", tone: "green" }, { label: "Frontend", tone: "purple" }] },
-  { en: "Developer Tool", ja: "開発者ツール", date: "2025 · Jul", pills: [{ label: "Dev Tools", tone: "yellow" }, { label: "Utility", tone: "yellow" }] },
-  { en: "3D Room Portfolio", ja: "3Dルームポートフォリオ", date: "2025 · Dec", pills: [{ label: "Frontend", tone: "purple" }, { label: "3D", tone: "purple" }] },
+  { en: "Lynt", ja: "Lynt", date: "2025 March", pills: [{ label: "Founder", tone: "green" }, { label: "Full-stack", tone: "blue" }] },
+  { en: "Service Scheduler", ja: "サービススケジューラー", date: "2025 July", pills: [{ label: "Scheduling", tone: "yellow" }, { label: "System", tone: "blue" }] },
+  { en: "Business Management System", ja: "ビジネス管理システム", date: "2025 October", pills: [{ label: "System", tone: "blue" }, { label: "Ops", tone: "purple" }] },
+  { en: "E-Commerce Platform", ja: "Eコマースプラットフォーム", date: "2025 December", pills: [{ label: "Commerce", tone: "red" }, { label: "Frontend", tone: "purple" }] },
+  { en: "Multilingual SaaS Platform", ja: "多言語SaaSプラットフォーム", date: "2026 February", pills: [{ label: "i18n", tone: "purple" }, { label: "SaaS", tone: "blue" }] },
+  { en: "System Monitoring and Log Management System", ja: "監視・ログ管理システム", date: "2026 May", pills: [{ label: "Realtime", tone: "red" }, { label: "Logs", tone: "yellow" }] },
+  { en: "Railway Reservation System", ja: "鉄道予約システム", date: "2026 July", pills: [{ label: "Booking", tone: "green" }, { label: "System", tone: "blue" }] },
 ];
 
 const DevelopmentJourney = () => {
@@ -75,15 +74,15 @@ const DevelopmentJourney = () => {
                     initial={{ opacity: 0, y: 6 }}
                     animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 6 }}
                     transition={{ delay, duration: 0.4, ease: "easeOut" }}
-                    className="relative grid grid-cols-2 gap-4"
+                    className="relative grid grid-cols-[1fr_auto_1fr] gap-4 items-start"
                   >
                     <motion.span
                       initial={{ scale: 0.4, backgroundColor: "hsl(var(--foreground) / 0.15)" }}
                       animate={inView ? { scale: 1, backgroundColor: "hsl(var(--foreground))" } : {}}
                       transition={{ delay: delay + 0.05, duration: 0.4 }}
-                      className="absolute left-1/2 -translate-x-1/2 top-1 w-2.5 h-2.5 rounded-full ring-4 ring-background z-10"
+                      className="col-start-2 mt-1 w-2.5 h-2.5 rounded-full ring-4 ring-background z-10"
                     />
-                    <div className={isLeft ? "col-start-1 text-right pr-5" : "col-start-2 text-left pl-5"}>
+                    <div className={isLeft ? "col-start-1 row-start-1 text-right pr-1" : "col-start-3 row-start-1 text-left pl-1"}>
                       <p className="text-[9px] uppercase tracking-widest text-muted-foreground mb-0.5">{p.date}</p>
                       <p className="text-xs md:text-sm font-semibold text-foreground leading-snug">
                         {language === "ja" ? p.ja : p.en}
