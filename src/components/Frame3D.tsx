@@ -54,7 +54,7 @@ const Frame3D = ({ children, className = "", maxWidthClass = "" }: Frame3DProps)
         return (
           <motion.div
             key={i}
-            className={`absolute ${pos} w-7 h-7 sm:w-12 sm:h-12 border-foreground/40 z-10 pointer-events-none`}
+            className={`absolute ${pos} w-8 h-8 sm:w-12 sm:h-12 border-foreground/40 z-10 pointer-events-none`}
             animate={{
               x: isHovered ? (isRight ? 4 : -4) : 0,
               y: isHovered ? (isBottom ? 4 : -4) : 0,

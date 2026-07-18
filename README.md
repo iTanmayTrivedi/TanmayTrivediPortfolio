@@ -146,7 +146,8 @@ bun run preview
 bunx vitest run
 ```
 
-> 
+> Lovable Cloud is provisioned automatically through the Lovable editor — no `.env` setup is required when forking inside Lovable.
+
 <br/>
 
 ---

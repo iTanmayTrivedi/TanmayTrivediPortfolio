@@ -18,48 +18,59 @@ interface Experiment {
 const experiments: Experiment[] = [
   {
     id: 1,
-    title: "Terminal Velocity",
-    titleJa: "終端速度",
-    description: "A kinetic browser experiment exploring speed, type, and motion without losing interface clarity.",
-    descriptionJa: "速度・タイポグラフィ・モーションを、UIの明快さを保ちながら探るブラウザ実験。",
+    title: "Motion Playground",
+    titleJa: "モーション実験室",
+    description:
+      "A sandbox of Framer Motion experiments — spring physics, scroll choreography, and layout transitions.",
+    descriptionJa:
+      "Framer Motionの実験場。スプリング物理、スクロール演出、レイアウト遷移。",
     tags: ["React", "Framer Motion", "TypeScript"],
-    githubUrl: "https://github.com/iTanmayTrivedi/terminalvelocity",
-    liveUrl: "https://terminalvelocity.tanmaytrivedi.dev/",
-    gradient: "linear-gradient(135deg, hsl(var(--foreground)) 0%, hsl(var(--muted-foreground)) 48%, hsl(var(--background)) 100%)",
+    githubUrl: "https://github.com/",
+    liveUrl: "#",
+    gradient:
+      "linear-gradient(135deg, hsl(var(--foreground)) 0%, hsl(var(--muted-foreground)) 100%)",
   },
-  
   {
     id: 2,
-    title: "MyCozyCorner",
-    titleJa: "私の居心地の良い場所",
-    description: "A small spatial interface study with warm composition, 3D presence, and calm interactions.",
-    descriptionJa: "温かい構図、3Dの存在感、静かな操作感を持つ小さな空間UIスタディ。",
+    title: "Shader Garden",
+    titleJa: "シェーダーガーデン",
+    description:
+      "GLSL fragment shaders ported to React Three Fiber — ripples, noise fields, and ink dispersion.",
+    descriptionJa:
+      "GLSLフラグメントシェーダーをR3Fへ移植。波紋・ノイズ・墨流し。",
     tags: ["R3F", "GLSL", "WebGL"],
-    githubUrl: "https://github.com/iTanmayTrivedi/mycozycorner",
-    liveUrl: "https://mycozycorner.tanmaytrivedi.dev/",
-    gradient: "linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--muted-foreground)) 52%, hsl(var(--foreground)) 100%)",
+    githubUrl: "https://github.com/",
+    liveUrl: "#",
+    gradient:
+      "linear-gradient(135deg, hsl(var(--muted-foreground)) 0%, hsl(var(--foreground)) 100%)",
   },
   {
     id: 3,
-    title: "Yohaku",
-    titleJa: "ヨハク",
-    description: "A typography and whitespace exercise inspired by Japanese restraint and bilingual layout rhythm.",
-    descriptionJa: "日本的な余白と二言語レイアウトのリズムから着想したタイポグラフィ実験。",
+    title: "Type Specimen",
+    titleJa: "活字標本",
+    description:
+      "Interactive type specimen exploring variable fonts, kinetic typography, and bilingual pairing.",
+    descriptionJa:
+      "可変フォント、キネティックタイポ、和欧混植のインタラクティブ標本。",
     tags: ["Variable Fonts", "CSS", "i18n"],
-    githubUrl: "https://github.com/iTanmayTrivedi/yohaku",
-    liveUrl: "https://yohaku.tanmaytrivedi.dev/",
-    gradient: "linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--secondary)) 45%, hsl(var(--foreground)) 100%)",
+    githubUrl: "https://github.com/",
+    liveUrl: "#",
+    gradient:
+      "linear-gradient(160deg, hsl(var(--foreground)) 0%, hsl(var(--secondary)) 100%)",
   },
   {
     id: 4,
-    title: "Kimi ni Todoke",
-    titleJa: "君に届け",
-    description: "A compact WebGL mood piece focused on feeling, pacing, and restrained visual storytelling.",
-    descriptionJa: "感情、間、控えめなビジュアルストーリーテリングに焦点を当てたWebGL作品。",
-    tags: ["WebGL"],
-    githubUrl: "https://github.com/iTanmayTrivedi/Kimi-ni-todoke",
-    liveUrl: "https://kiminitodoke.tanmaytrivedi.dev/",
-    gradient: "linear-gradient(135deg, hsl(var(--foreground)) 0%, hsl(var(--muted-foreground)) 55%, hsl(var(--secondary)) 100%)",
+    title: "Edge AI Demos",
+    titleJa: "Edge AIデモ",
+    description:
+      "Tiny open-source demos calling Lovable AI Gateway from Edge Functions with strict JSON schemas.",
+    descriptionJa:
+      "Edge FunctionからLovable AI Gatewayを呼び出す軽量OSSデモ集。",
+    tags: ["Deno", "AI Gateway", "Zod"],
+    githubUrl: "https://github.com/",
+    liveUrl: "#",
+    gradient:
+      "linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--foreground)) 100%)",
   },
 ];
 

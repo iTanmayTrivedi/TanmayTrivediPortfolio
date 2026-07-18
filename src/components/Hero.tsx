@@ -576,6 +576,8 @@ const Hero = () => {
           ))}
         </motion.div>
 
+        {/* Scroll indicator removed */}
+
         {/* Creative Japanese-Inspired Interactive Visual */}
         <motion.div
           initial={{ opacity: 0, y: 60 }}

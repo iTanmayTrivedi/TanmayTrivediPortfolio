@@ -20,13 +20,13 @@ interface Project {
 }
 
 const projects: Project[] = [
-  { en: "Lynt", ja: "Lynt", date: "2025 March", pills: [{ label: "Founder", tone: "green" }, { label: "Full-stack", tone: "blue" }] },
-  { en: "Service Scheduler", ja: "サービススケジューラー", date: "2025 July", pills: [{ label: "Scheduling", tone: "yellow" }, { label: "System", tone: "blue" }] },
-  { en: "Business Management System", ja: "ビジネス管理システム", date: "2025 October", pills: [{ label: "System", tone: "blue" }, { label: "Ops", tone: "purple" }] },
-  { en: "E-Commerce Platform", ja: "Eコマースプラットフォーム", date: "2025 December", pills: [{ label: "Commerce", tone: "red" }, { label: "Frontend", tone: "purple" }] },
+  { en: "Lynt", ja: "Lynt", date: "2025 March", pills: [{ label: "Founder", tone: "red" }, { label: "Full-Stack", tone: "blue" }] },
+  { en: "Service Scheduler", ja: "サービススケジューラー", date: "2025 July", pills: [{ label: "System", tone: "blue" }, { label: "Real-time", tone: "red" }] },
+  { en: "Business Management System", ja: "業務管理システム", date: "2025 October", pills: [{ label: "System", tone: "blue" }, { label: "Backend", tone: "blue" }] },
+  { en: "E-Commerce Platform", ja: "ECプラットフォーム", date: "2025 December", pills: [{ label: "Frontend", tone: "purple" }, { label: "Backend", tone: "blue" }] },
   { en: "Multilingual SaaS Platform", ja: "多言語SaaSプラットフォーム", date: "2026 February", pills: [{ label: "i18n", tone: "purple" }, { label: "SaaS", tone: "blue" }] },
-  { en: "System Monitoring and Log Management System", ja: "監視・ログ管理システム", date: "2026 May", pills: [{ label: "Realtime", tone: "red" }, { label: "Logs", tone: "yellow" }] },
-  { en: "Railway Reservation System", ja: "鉄道予約システム", date: "2026 July", pills: [{ label: "Booking", tone: "green" }, { label: "System", tone: "blue" }] },
+  { en: "System Monitoring & Log Management System", ja: "監視・ログ管理システム", date: "2026 May", pills: [{ label: "Real-time", tone: "red" }, { label: "Performance", tone: "red" }] },
+  { en: "Railway Reservation System", ja: "鉄道予約システム", date: "2026 July", pills: [{ label: "System", tone: "blue" }, { label: "Backend", tone: "blue" }] },
 ];
 
 const DevelopmentJourney = () => {
@@ -80,9 +80,9 @@ const DevelopmentJourney = () => {
                       initial={{ scale: 0.4, backgroundColor: "hsl(var(--foreground) / 0.15)" }}
                       animate={inView ? { scale: 1, backgroundColor: "hsl(var(--foreground))" } : {}}
                       transition={{ delay: delay + 0.05, duration: 0.4 }}
-                      className="col-start-2 mt-1 w-2.5 h-2.5 rounded-full ring-4 ring-background z-10"
+                      className="col-start-2 justify-self-center w-2.5 h-2.5 rounded-full ring-4 ring-background z-10 mt-1"
                     />
-                    <div className={isLeft ? "col-start-1 row-start-1 text-right pr-1" : "col-start-3 row-start-1 text-left pl-1"}>
+                    <div className={isLeft ? "col-start-1 text-right pr-5" : "col-start-3 text-left pl-5"}>
                       <p className="text-[9px] uppercase tracking-widest text-muted-foreground mb-0.5">{p.date}</p>
                       <p className="text-xs md:text-sm font-semibold text-foreground leading-snug">
                         {language === "ja" ? p.ja : p.en}

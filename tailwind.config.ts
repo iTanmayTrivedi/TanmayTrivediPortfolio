@@ -51,16 +51,6 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        apple: {
-          gray: "hsl(var(--apple-gray))",
-        },
-        yuki: {
-          ink: "hsl(var(--yuki-ink))",
-        },
-      },
-      boxShadow: {
-        "yuki-soft": "0 24px 70px -42px hsl(var(--foreground) / 0.28)",
-        "yuki-chat": "0 18px 44px -30px hsl(var(--foreground) / 0.42)",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -95,6 +85,10 @@ export default {
         "slide-up": {
           "0%": { transform: "translateY(100%)" },
           "100%": { transform: "translateY(0)" },
+        },
+        "lynt-marquee": {
+          "0%": { transform: "translate3d(0,0,0)" },
+          "100%": { transform: "translate3d(-50%,0,0)" },
         },
       },
       animation: {

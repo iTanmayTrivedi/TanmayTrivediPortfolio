@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Send, Loader2, CheckCircle, ArrowRight } from "lucide-react";
+import { Send, Loader2, CheckCircle, ArrowRight, AlertCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const EMAIL = "tanmay.trivedi.jp@gmail.com";
+// Web3Forms access key — safe to expose in the browser (it only routes to your inbox).
+// Get yours at https://web3forms.com and paste it here.
+const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "";
 
 interface FormData {
   name: string;
@@ -23,31 +25,60 @@ const ContactForm = () => {
     message: "",
   });
   const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [focusedField, setFocusedField] = useState<string | null>(null);
 
   const handleChange = (field: keyof FormData, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
 
     setStatus("sending");
+    setErrorMsg(null);
 
-    const subject = encodeURIComponent(formData.subject || "Portfolio Contact");
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\n\n${formData.message}`
-    );
+    if (!WEB3FORMS_ACCESS_KEY) {
+      setStatus("idle");
+      setErrorMsg("Form is not configured yet. Missing Web3Forms access key.");
+      return;
+    }
 
-    setTimeout(() => {
-      window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
-      setStatus("sent");
-      setTimeout(() => {
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          from_name: formData.name,
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          subject: formData.subject || `Portfolio Contact — ${formData.name}`,
+          message: formData.message,
+          botcheck: "",
+        }),
+      });
+
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && data.success) {
+        setStatus("sent");
+        setTimeout(() => {
+          setStatus("idle");
+          setFormData({ name: "", email: "", company: "", subject: "", message: "" });
+        }, 3500);
+      } else {
         setStatus("idle");
-        setFormData({ name: "", email: "", company: "", subject: "", message: "" });
-      }, 3000);
-    }, 800);
+        setErrorMsg(data?.message || "Something went wrong. Please try again.");
+      }
+    } catch {
+      setStatus("idle");
+      setErrorMsg("Network error. Please try again.");
+    }
   };
 
   const fields: { key: keyof FormData; label: string; placeholder: string; type?: string; required?: boolean }[] = [
@@ -77,11 +108,6 @@ const ContactForm = () => {
         <h3 className="text-2xl font-semibold tracking-tight">
           {t("contact.formTitle")}
         </h3>
-        <motion.div
-          className="w-2 h-2 rounded-full bg-background/40"
-          animate={{ opacity: [0.4, 1, 0.4] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        />
       </div>
 
       <AnimatePresence mode="wait">
@@ -267,6 +293,19 @@ const ContactForm = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
             >
+              <AnimatePresence>
+                {errorMsg && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0 }}
+                    className="mb-4 flex items-center gap-2 text-[13px] text-background/80"
+                  >
+                    <AlertCircle className="w-4 h-4" />
+                    <span>{errorMsg}</span>
+                  </motion.div>
+                )}
+              </AnimatePresence>
               <motion.button
                 type="submit"
                 disabled={status === "sending"}
