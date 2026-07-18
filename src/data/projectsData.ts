@@ -158,9 +158,8 @@ Every destructive action (delete employee, remove task) requires confirmation. F
       "Fully bilingual interface (English / Japanese)",
     ],
     screenshots: [project1, project2, project3],
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://teamhub.tanmaytrivedi.dev/",
+    githubUrl: "https://github.com/iTanmayTrivedi/TeamManagementSystemJapan",
     architecturalDiagram: {
       components: [
         { name: "React SPA", description: "Vite, React Router, shadcn/ui, custom hooks" },
@@ -338,9 +337,8 @@ Every destructive action (cancel, delete, no-show) is confirmed. Form errors app
       "Dual-mode operation: live Supabase or fully offline demo.",
     ],
     screenshots: [project2, project3, project4],
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://bookflow.tanmaytrivedi.dev/",
+    githubUrl: "https://github.com/iTanmayTrivedi/ServiceScheduleJapan",
     architecturalDiagram: {
       components: [
         { name: "React SPA", description: "TypeScript, Vite, Tailwind, shadcn/ui." },
@@ -510,9 +508,8 @@ Every destructive action is confirmed via dialogs, forms validate inline, and th
       "Full bilingual EN/JP across every screen",
     ],
     screenshots: [project3, project1, project2],
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://rakuten.tanmaytrivedi.dev/",
+    githubUrl: "https://github.com/iTanmayTrivedi/RakutenJapan",
     architecturalDiagram: {
       components: [
         { name: "React SPA", description: "Vite, TanStack Query, Tailwind tokens" },
@@ -673,9 +670,8 @@ Built to replace a fragmented stack of translation apps, Google Docs templates, 
       "Real-time notifications and command palette navigation.",
     ],
     screenshots: [project4, project2, project1],
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://globaldashboard.tanmaytrivedi.dev/",
+    githubUrl: "https://github.com/iTanmayTrivedi/GlobalSaaSDashboardJapan",
     architecturalDiagram: {
       components: [
         { name: "React SPA (Vite)", description: "UI & client state" },
@@ -837,9 +833,8 @@ The auth page intentionally breaks the pattern with a refined editorial split-sc
       "Hybrid architecture — instantly switch between Live and Offline Demo.",
     ],
     screenshots: [project5, project1, project3],
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://sysmonitor.tanmaytrivedi.dev/",
+    githubUrl: "https://github.com/iTanmayTrivedi/SystemMonitoringJapan",
     architecturalDiagram: {
       components: [
         { name: "React SPA", description: "Dashboards, command palette, animated charts." },
@@ -972,7 +967,7 @@ Built solo as a B.Tech final-year project to demonstrate startup-grade product e
       edge: "resume-assist (Deno) calling Lovable AI Gateway.",
       auth: "Supabase Auth (email + Google OAuth), JWT in httpOnly storage.",
       storage: "Buckets for avatars, banners, resume photos.",
-      deployment: "Lovable hosted preview + custom domain, CDN-cached assets.",
+      deployment: "Vercel + custom domain, CDN-cached assets.",
     },
     challenges: [
       { problem: "Modeling Japanese resume format faithfully.", solution: "Western form libraries don't understand 年号 (Reiwa/Heisei eras) or merged Education+Work chronology. Built japanDate.ts to convert Gregorian dates to era + 年号 handling, with a single merged history table pixel-aligned to printed JIS B5." },
@@ -989,8 +984,8 @@ Built solo as a B.Tech final-year project to demonstrate startup-grade product e
       "All state auto-persists; users never lose progress on refresh.",
     ],
     database: {
-      type: "PostgreSQL (Lovable Cloud)",
-      description: "PostgreSQL via Lovable Cloud. Every public table has RLS scoped to auth.uid() and explicit GRANTs.",
+      type: "PostgreSQL (Supabase)",
+      description: "PostgreSQL via Supabase. Every public table has RLS scoped to auth.uid() and explicit GRANTs.",
       stores: ["profiles — display name, bio, avatar_url, banner_url, banner_theme", "user_roles — separate roles table with app_role enum and has_role() SECURITY DEFINER", "resume_versions — named drafts of full resume JSON, per user", "applications — job tracker rows", "missions_progress — gamified coaching state", "onboarding_state — JapanPathContext snapshot"],
     },
     security: [
@@ -1012,9 +1007,8 @@ Built solo as a B.Tech final-year project to demonstrate startup-grade product e
       "Mission Mode gamified coaching with daily/weekly tasks.",
     ],
     screenshots: [project6, project2, project4],
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://lynt.tanmaytrivedi.dev/",
+    githubUrl: "https://github.com/iTanmayTrivedi/LyntJapan",
     architecturalDiagram: {
       components: [
         { name: "React SPA", description: "Vite + Tailwind + Framer Motion." },
@@ -1022,7 +1016,7 @@ Built solo as a B.Tech final-year project to demonstrate startup-grade product e
         { name: "Supabase Auth", description: "Email + Google OAuth." },
         { name: "Supabase Storage", description: "Avatars / banners / resume photos." },
         { name: "Edge Function resume-assist", description: "Deno runtime." },
-        { name: "Lovable AI Gateway", description: "Gemini / GPT routing." },
+        { name: "Lovable AI Gateway", description: "Groq / GPT routing." },
       ],
       flow: [
         "Browser → Lovable CDN → React SPA.",
