@@ -18,59 +18,36 @@ interface Experiment {
 const experiments: Experiment[] = [
   {
     id: 1,
-    title: "Motion Playground",
-    titleJa: "モーション実験室",
-    description:
-      "A sandbox of Framer Motion experiments — spring physics, scroll choreography, and layout transitions.",
-    descriptionJa:
-      "Framer Motionの実験場。スプリング物理、スクロール演出、レイアウト遷移。",
+    title: "Terminal Velocity",
+    titleJa: "終端速度",
     tags: ["React", "Framer Motion", "TypeScript"],
-    githubUrl: "https://github.com/",
-    liveUrl: "#",
-    gradient:
-      "linear-gradient(135deg, hsl(var(--foreground)) 0%, hsl(var(--muted-foreground)) 100%)",
+    githubUrl: "https://github.com/iTanmayTrivedi/terminalvelocity",
+    liveUrl: "https://terminalvelocity.tanmaytrivedi.dev/",
   },
+  
   {
     id: 2,
-    title: "Shader Garden",
-    titleJa: "シェーダーガーデン",
-    description:
-      "GLSL fragment shaders ported to React Three Fiber — ripples, noise fields, and ink dispersion.",
-    descriptionJa:
-      "GLSLフラグメントシェーダーをR3Fへ移植。波紋・ノイズ・墨流し。",
+    title: "MyCozyCorner",
+    titleJa: "私の居心地の良い場所",
     tags: ["R3F", "GLSL", "WebGL"],
-    githubUrl: "https://github.com/",
-    liveUrl: "#",
-    gradient:
-      "linear-gradient(135deg, hsl(var(--muted-foreground)) 0%, hsl(var(--foreground)) 100%)",
+    githubUrl: "https://github.com/iTanmayTrivedi/mycozycorner",
+    liveUrl: "https://mycozycorner.tanmaytrivedi.dev/",
   },
   {
     id: 3,
-    title: "Type Specimen",
-    titleJa: "活字標本",
-    description:
-      "Interactive type specimen exploring variable fonts, kinetic typography, and bilingual pairing.",
-    descriptionJa:
-      "可変フォント、キネティックタイポ、和欧混植のインタラクティブ標本。",
+    title: "Yohaku",
+    titleJa: "ヨハク",
     tags: ["Variable Fonts", "CSS", "i18n"],
-    githubUrl: "https://github.com/",
-    liveUrl: "#",
-    gradient:
-      "linear-gradient(160deg, hsl(var(--foreground)) 0%, hsl(var(--secondary)) 100%)",
+    githubUrl: "https://github.com/iTanmayTrivedi/yohaku",
+    liveUrl: "https://yohaku.tanmaytrivedi.dev/",
   },
   {
     id: 4,
-    title: "Edge AI Demos",
-    titleJa: "Edge AIデモ",
-    description:
-      "Tiny open-source demos calling Lovable AI Gateway from Edge Functions with strict JSON schemas.",
-    descriptionJa:
-      "Edge FunctionからLovable AI Gatewayを呼び出す軽量OSSデモ集。",
-    tags: ["Deno", "AI Gateway", "Zod"],
-    githubUrl: "https://github.com/",
-    liveUrl: "#",
-    gradient:
-      "linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--foreground)) 100%)",
+    title: "Kimi ni Todoke",
+    titleJa: "君に届け",
+    tags: ["WebGL"],
+    githubUrl: "https://github.com/iTanmayTrivedi/Kimi-ni-todoke",
+    liveUrl: "https://kiminitodoke.tanmaytrivedi.dev/",
   },
 ];
 
