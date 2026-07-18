@@ -1,204 +1,130 @@
-<!--
-  Repository README — Tanmay Trivedi · Portfolio
-  Lives at the root of this project. Renders on the GitHub repo page.
--->
-
 <div align="center">
 
-<kbd>　作 品 集　</kbd>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,50:e94560,100:ff8fb3&height=230&section=header&text=田丸%20環%20·%20Tanmay%20Trivedi&fontSize=40&fontColor=ffffff&animation=twinkling&fontAlignY=36&desc=Product%20Engineer%20·%20一期一会%20·%20Building%20a%20path%20to%20日本&descAlignY=58&descSize=17"/>
 
-# Tanmay Trivedi &nbsp;·&nbsp; Portfolio
-### 田丸 環 &nbsp;·&nbsp; *Product Engineering Portfolio*
-
-<sub>A bilingual (EN&nbsp;/&nbsp;日本語), motion-driven portfolio built with the same care as the products it showcases.</sub>
+<img src="assets/sakura.svg" width="100%"/>
 
 <br/>
 
-[![Live](https://img.shields.io/badge/⌘_Live_Site-0A0A0A?style=for-the-badge&labelColor=0A0A0A)](https://itanmaytrivedi.com)
-[![Stack](https://img.shields.io/badge/React_18-1A1A1A?style=for-the-badge&labelColor=1A1A1A&logo=react&logoColor=61DAFB)](#)
-[![Vite](https://img.shields.io/badge/Vite-1A1A1A?style=for-the-badge&labelColor=1A1A1A&logo=vite&logoColor=FFD028)](#)
-[![Tailwind](https://img.shields.io/badge/Tailwind-1A1A1A?style=for-the-badge&labelColor=1A1A1A&logo=tailwindcss&logoColor=38BDF8)](#)
-[![Lovable Cloud](https://img.shields.io/badge/Lovable_Cloud-0A0A0A?style=for-the-badge&labelColor=0A0A0A)](#)
+<a href="https://github.com/iTanmayTrivedi">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3200&pause=900&color=E94560&center=true&vCenter=true&width=680&lines=%E6%82%A0+Yuki+AI+%E2%80%94+a+bilingual+Japan-specialist+chatbot;Lynt+%E2%80%94+live+Japan+career+%26+visa+intelligence;JLPT+N1+%C2%B7+3%2C400%2B+network+in+Japan;%E7%9B%AE%E6%A8%99%EF%BC%9A2029%E5%B9%B4%E6%97%A5%E6%9C%AC%E3%81%B8%E3%80%80%F0%9F%8C%B8" alt="Typing SVG"/>
+</a>
+
+<br/><br/>
+
+<img src="https://img.shields.io/badge/⌘_Portfolio-1a1a2e?style=for-the-badge&labelColor=1a1a2e&color=e94560"/> <a href="https://tanmaytrivedi.dev">tanmaytrivedi.dev</a>
+&nbsp;·&nbsp;
+[![Email](https://img.shields.io/badge/✉_Email-e94560?style=for-the-badge&labelColor=1a1a2e)](mailto:itanmaytrivedi@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/in_LinkedIn-e94560?style=for-the-badge&labelColor=1a1a2e)](https://www.linkedin.com/in/itanmaytrivedi)
+[![X](https://img.shields.io/badge/✕_Twitter-e94560?style=for-the-badge&labelColor=1a1a2e)](https://x.com/iTanmayTrivedi)
 
 </div>
 
 <br/>
 
----
+<div align="center">
+<samp>「一期一会」　—　every encounter, a once-in-a-lifetime meeting</samp>
+</div>
 
-<div align="center"><sub>　序　&nbsp;·&nbsp; OVERVIEW　</sub></div>
+<br/>
 
-A minimalist, high-contrast black-and-white portfolio that pairs **Apple-keynote restraint** with **Japanese typographic detail**. Designed and built solo — from the empty `package.json` to the live URL — to function as both a portfolio and a calling card for Japanese recruiters.
+## 　序　·　プロローグ　·　Prologue
 
-```
-Design language   ·   Minimal · Bold · 余白 (negative space)
-Typography        ·   Inter Tight  +  Noto Sans JP · -apple-system
-Motion            ·   Framer Motion · Three.js (R3F)
-Language          ·   EN ↔ JP toggle, persisted, full UI parity
+```ts
+const tanmay = {
+  名前    : "Tanmay Trivedi · 田丸 環",
+  役割    : "Product Engineer — Frontend-leaning Full-Stack",
+  拠点    : "Kanpur, India  →  🇯🇵  Tokyo / Osaka, targeting 2029",
+  言語    : ["English (Business)", "日本語 (JLPT N1)"],
+  学業    : "B.Tech Biotechnology @ Rama University",
+  現在    : ["Lynt — live Japan career & visa intelligence SaaS",
+             "悠 Yuki AI — bilingual Japan-specialist chatbot"],
+  哲学    : "静かに作り、丁寧に届ける — build quietly, deliver thoughtfully",
+} as const;
 ```
 
 <br/>
 
----
+## 　壱　·　制作物　·　Selected Work
 
-<div align="center"><sub>　壱　&nbsp;·&nbsp; HIGHLIGHTS　/　見 所　</sub></div>
+<table width="100%">
+<tr><td width="50%" valign="top">
 
-<br/>
+### 🌸 Lynt
+Live SaaS for Japan-bound career & visa intelligence — pathway matching, readiness scoring, job portal, bilingual AI companion.
 
-<table align="center" width="92%">
-<tr>
-<td valign="top" width="50%">
+`React · Vite · TanStack Router · Supabase · Redis`
 
-#### ▮ &nbsp; Bilingual UI
-EN ↔ JP toggle persisted via `LanguageContext` + `localStorage`. Every section — hero, projects, case studies, contact — has full parity.
+</td><td width="50%" valign="top">
 
-</td>
-<td valign="top" width="50%">
+### 悠 Yuki AI
+A Japan-specialist bilingual chatbot — honorific-aware, real-time, built on Groq + Supabase Edge Functions.
 
-#### ▮ &nbsp; Sumi-e Hero
-3D canvas with Ensō circles, Sakura petals, an interactive terminal, and rotating tech-skill text on a 3.5s cadence.
+`Next.js · Supabase Edge Functions · Groq (Llama 3.3 70B)`
 
-</td>
-</tr>
-<tr>
-<td valign="top" width="50%">
+</td></tr>
 
-#### ▮ &nbsp; Case-Study System
-A 19-section engineering template with side-by-side device mockups — used across six bilingual case studies.
+<tr><td width="50%" valign="top">
 
-</td>
-<td valign="top" width="50%">
+### TeamHub
+Realtime team & task platform with AI insights and live presence sync.
 
-#### ▮ &nbsp; LYNT Founder Section
-Apple-keynote glass surfaces, animated readiness score, edge-fade marquee, and aurora-lit metric rails.
+`Next.js · Supabase · Realtime`
 
-</td>
-</tr>
-<tr>
-<td valign="top" width="50%">
+</td><td width="50%" valign="top">
 
-#### ▮ &nbsp; Resume Access
-English Resume + 履歴書 (Rirekisho) wired into the hero & contact section with shimmer-gradient CTAs.
+### BookFlow
+Bilingual appointment & reservation platform with AI scheduling and dual demo mode.
 
-</td>
-<td valign="top" width="50%">
+`React · Supabase · Edge Functions`
 
-#### ▮ &nbsp; Considered Details
-Living-cosmos brand logo, dual-timezone clock (IST ↔ JST), preloader with glitchy 「創」 kanji, footer wave hover.
-
-</td>
-</tr>
+</td></tr>
 </table>
 
-<br/>
-
----
-
-<div align="center"><sub>　弐　&nbsp;·&nbsp; STACK　/　道 具　</sub></div>
+<div align="center"><sub>Full case studies live at <a href="https://tanmaytrivedi.dev"><b>tanmaytrivedi.dev</b></a></sub></div>
 
 <br/>
 
-<table align="center" width="92%">
-<tr>
-<td valign="top" width="25%"><sub>**Frontend**</sub><br/><sub>React 18 · TypeScript 5 · Vite 5 · Tailwind v3 · Framer Motion · shadcn/ui · Three.js / R3F</sub></td>
-<td valign="top" width="25%"><sub>**Backend**</sub><br/><sub>Lovable Cloud · Postgres + RLS · Edge Functions (Deno) · Resend (mail)</sub></td>
-<td valign="top" width="25%"><sub>**Tooling**</sub><br/><sub>Vitest · ESLint · TypeScript strict · Bun · Lovable Editor</sub></td>
-<td valign="top" width="25%"><sub>**Craft**</sub><br/><sub>i18n (EN ↔ JP) · WCAG AA · Design tokens · Motion choreography · Perf budgets</sub></td>
-</tr>
-</table>
+## 　弐　·　道具　·　Craft &amp; Stack
+
+<div align="center">
+<img src="https://skillicons.dev/icons?i=react,vite,ts,nextjs,tailwind,nodejs,postgres,supabase,go,docker,aws,redis,vercel&theme=dark"/>
+</div>
 
 <br/>
 
----
-
-<div align="center"><sub>　参　&nbsp;·&nbsp; STRUCTURE　/　構 成　</sub></div>
-
-```text
-src/
-├─ assets/              static images, certificates, resumes
-├─ components/          composable UI (Hero, Projects, LyntSection, …)
-│  └─ ui/               shadcn primitives
-├─ contexts/            LanguageContext (EN ↔ JP)
-├─ data/                projectsData.ts — case-study source of truth
-├─ hooks/               use-mobile, use-toast
-├─ pages/               Index · ProjectDetail · NotFound
-└─ index.css            design tokens, theme, semantic palette
-```
-
-<br/>
-
----
-
-<div align="center"><sub>　肆　&nbsp;·&nbsp; LOCAL DEVELOPMENT　/　開 発　</sub></div>
-
-```bash
-# 1 · install
-bun install            # or  npm install
-
-# 2 · run dev server
-bun run dev            # vite at http://localhost:5173
-
-# 3 · build & preview
-bun run build
-bun run preview
-
-# 4 · test
-bunx vitest run
-```
-
-> 
-<br/>
-
----
-
-<div align="center"><sub>　伍　&nbsp;·&nbsp; CASE STUDIES INCLUDED　/　事 例　</sub></div>
-
-<br/>
+## 　参　·　活動　·　Signal
 
 <div align="center">
 
-| #  | Project | 内容 | Headline metric |
-|----|---------|------|-----------------|
-| 01 | **TeamHub** · チームハブ | Realtime team & task platform | 70% faster status sync · 100ms presence |
-| 02 | **BookFlow** · ブックフロー | AI scheduling & reservations | 0.8s TTI · 4 AI Edge Functions |
-| 03 | **Rakuten Reimagined** · 楽天リイマジンド | Bilingual marketplace clone | <800ms first paint · 60fps |
-| 04 | **Kaizen** · 改善 | AI 敬語 · 翻訳 · 議事録 suite | 23 routes · 9 RLS tables · 100% EN↔JP parity |
-| 05 | **SysMonitor** · システムモニター | Observability + AI RCA | 7 tools · 1,200+ pairs · ~1.2s AI latency |
-| 06 | **JapanPath** · ジャパンパス | OS for moving to Japan | 14+ routes · 30+ visas · LH 92/98/100 |
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=iTanmayTrivedi&show_icons=true&hide_border=true&hide_title=true&include_all_commits=true&count_private=true&icon_color=e94560&text_color=c9d1d9&title_color=e94560&bg_color=1a1a2e"/>
+<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=iTanmayTrivedi&layout=compact&hide_border=true&langs_count=8&text_color=c9d1d9&title_color=e94560&bg_color=1a1a2e"/>
+
+<br/><br/>
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=iTanmayTrivedi&hide_border=true&background=1a1a2e&stroke=1a1a2e&ring=e94560&fire=ff8fb3&currStreakLabel=c9d1d9" width="70%"/>
 
 </div>
 
 <br/>
 
----
-
-<div align="center"><sub>　陸　&nbsp;·&nbsp; CONTACT　/　連 絡　</sub></div>
-
-<br/>
+## 　肆　·　一緒に働きませんか　·　Let's Work Together
 
 <div align="center">
 
-If your team is building thoughtful products in Japan and needs a single engineer who can own a feature **Figma → Postgres → ship → measure → 日本語化**, I'd love to talk.
+I'm interviewing with **product-led Japanese teams** that value craft, bilingual delivery, and shipping over ceremony.
+If your team needs one engineer who can own a feature end-to-end — **design → Postgres → ship → measure → 日本語化** — let's talk.
 
-📩 &nbsp; **itanmaytrivedi@gmail.com** &nbsp;·&nbsp; 🌐 &nbsp; [itanmaytrivedi.com](https://itanmaytrivedi.com)
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/itanmaytrivedi)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/itanmaytrivedi)
-[![X](https://img.shields.io/badge/Twitter-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/iTanmayTrivedi)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/itanmaytrivedi/)
+📩&nbsp; **itanmaytrivedi@gmail.com** &nbsp;·&nbsp; 📄&nbsp; [Portfolio & Resume](https://tanmaytrivedi.dev)
 
 <br/>
 
-<sub>━━━━━━━━━━━━━━━━━━━━&nbsp; 　 印 　 &nbsp;━━━━━━━━━━━━━━━━━━━━</sub>
-
+<samp>「改善は毎日の小さな一歩から。」</samp>
 <br/>
+<sub>*Improvement is built one quiet commit at a time.*</sub>
 
-<samp>「神は細部に宿る。」</samp>
-<br/>
-<sub>*The divine is in the details.*</sub>
+<br/><br/>
 
-<br/>
-
-<sub>© Tanmay Trivedi &nbsp;·&nbsp; 田丸 環 &nbsp;·&nbsp; Designed &amp; built with 静けさ</sub>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:ff8fb3,50:e94560,100:1a1a2e&height=100&section=footer"/>
 
 </div>
