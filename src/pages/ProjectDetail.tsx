@@ -348,10 +348,6 @@ const ProjectDetail = () => {
           </motion.p>
         </AnimatedSection>
 
-        {/* Hero - Device Mockups with simulated screens for all projects */}
-        <AnimatedSection className="container mx-auto px-4 sm:px-6 lg:px-12 mb-24" delay={0.2}>
-          <DeviceMockups screenshots={project.screenshots} title={project.title} projectSlug={slug} />
-        </AnimatedSection>
 
         {/* Project Number Badge */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-12 mb-16">
