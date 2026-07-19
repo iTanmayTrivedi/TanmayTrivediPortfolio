@@ -139,7 +139,9 @@ const YukiSection = () => {
 
             <div className="relative z-10 space-y-3 mt-10">
               <a
-                href="#yuki-chat"
+                href="https://yuki.tanmaytrivedi.dev"
+                target="_blank"
+                rel="noreferrer noopener"
                 className="group/btn w-full inline-flex items-center justify-between gap-4 py-4 px-6 rounded-2xl bg-[#1d1d1f] text-white text-[12px] font-medium tracking-[0.12em] uppercase transition-all duration-500 hover:bg-black hover:-translate-y-0.5 shadow-[0_8px_24px_-12px_rgba(29,29,31,0.18)] hover:shadow-[0_12px_32px_-16px_rgba(29,29,31,0.25)]"
               >
                 Say Hello to Yuki

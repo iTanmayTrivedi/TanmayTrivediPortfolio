@@ -4,8 +4,8 @@ import { Send, Loader2, CheckCircle, ArrowRight, AlertCircle } from "lucide-reac
 import { useLanguage } from "@/contexts/LanguageContext";
 
 // Web3Forms access key — safe to expose in the browser (it only routes to your inbox).
-// Get yours at https://web3forms.com and paste it here.
-const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "";
+const WEB3FORMS_ACCESS_KEY =
+  import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "def9b1f3-3402-4e47-a3b2-4156b9505ef1";
 
 interface FormData {
   name: string;
