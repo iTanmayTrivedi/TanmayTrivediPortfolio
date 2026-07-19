@@ -1013,8 +1013,8 @@ Built solo as a B.Tech final-year project to demonstrate startup-grade product e
     ],
     screenshots: [project6, project2, project4],
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://lynt.tanmaytrivedi.dev",
+    githubUrl: "https://github.com/iTanmayTrivedi/LyntJapan",
     architecturalDiagram: {
       components: [
         { name: "React SPA", description: "Vite + Tailwind + Framer Motion." },
