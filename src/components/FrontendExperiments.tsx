@@ -63,9 +63,9 @@ const experiments: Experiment[] = [
     title: "Edge AI Demos",
     titleJa: "Edge AIデモ",
     description:
-      "Tiny open-source demos calling Lovable AI Gateway from Edge Functions with strict JSON schemas.",
+      "Tiny open-source demos calling AI Gateway from Edge Functions with strict JSON schemas.",
     descriptionJa:
-      "Edge FunctionからLovable AI Gatewayを呼び出す軽量OSSデモ集。",
+      "Edge FunctionからAI Gatewayを呼び出す軽量OSSデモ集。",
     tags: ["Deno", "AI Gateway", "Zod"],
     githubUrl: "https://github.com/",
     liveUrl: "#",

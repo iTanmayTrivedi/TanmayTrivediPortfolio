@@ -63,7 +63,7 @@ It replaces fragmented to-do lists, scattered status updates, and manual reporti
       { name: "Tailwind + shadcn/ui", reason: "Token-based design system with dark/light themes and an accessible component library tuned to a slate + amber palette." },
       { name: "TypeScript", reason: "End-to-end type safety from database types down to UI props." },
       { name: "Recharts", reason: "Lightweight charting for status, priority, and completion analytics." },
-      { name: "Google Gemini (via Lovable AI Gateway)", reason: "Powers daily summaries, prioritization, and activity insights." },
+      { name: "Google Gemini (via AI Gateway)", reason: "Powers daily summaries, prioritization, and activity insights." },
     ],
     problem: [
       "Managers had no single view of team workload — status lived in chats, sheets, and email.",
@@ -119,8 +119,8 @@ Every destructive action (delete employee, remove task) requires confirmation. F
       backend: "Supabase Postgres with RLS policies on every table; SECURITY DEFINER functions (has_role) to avoid RLS recursion.",
       auth: "Supabase Auth with email/password + Google OAuth. Roles stored in a dedicated user_roles table to prevent privilege escalation.",
       realtime: "Supabase Realtime channels for presence and activity feed.",
-      ai: "Supabase Edge Functions calling google/gemini-3-flash-preview through the Lovable AI Gateway.",
-      deployment: "Lovable hosting + Supabase managed infrastructure.",
+      ai: "Supabase Edge Functions calling google/gemini-3-flash-preview through the AI Gateway.",
+      deployment: "CDN hosting + Supabase managed infrastructure.",
     },
     challenges: [
       { problem: "RLS recursion when checking roles.", solution: "Initial policies referenced the user_roles table directly inside other policies, causing infinite recursion. Solved by isolating roles in their own table and querying them through a SECURITY DEFINER function (has_role) that bypasses RLS safely." },
@@ -168,7 +168,7 @@ Every destructive action (delete employee, remove task) requires confirmation. F
         { name: "Supabase Auth", description: "Email + Google OAuth" },
         { name: "Supabase Realtime", description: "Presence + activity broadcasts" },
         { name: "Edge Functions", description: "ai-insights, due-date-reminders" },
-        { name: "Lovable AI Gateway", description: "Routes to Gemini models" },
+        { name: "AI Gateway", description: "Routes to Gemini models" },
       ],
       flow: [
         "Client → Supabase Auth (JWT issued)",
@@ -295,11 +295,11 @@ Every destructive action (cancel, delete, no-show) is confirmed. Form errors app
       ],
     },
     architecture: {
-      frontend: "React 18 + TypeScript SPA, TanStack Query for server state, Framer Motion for interaction, deployed on the Lovable CDN.",
+      frontend: "React 18 + TypeScript SPA, TanStack Query for server state, Framer Motion for interaction, deployed on the CDN.",
       backend: "Supabase (Postgres) with RLS policies as the primary authorization layer. Edge Functions (Deno) handle AI and privileged mutations.",
       database: "Postgres with custom enums (app_role, appointment_status), trigger-driven role provisioning, separate user_roles table.",
       auth: "Supabase Auth with email/password + Google OAuth, JWT sessions, password reset via email link.",
-      deployment: "Lovable hosting with automatic preview environments per change.",
+      deployment: "CDN hosting with automatic preview environments per change.",
     },
     challenges: [
       { problem: "Letting recruiters experience the full app without signup.", solution: "Built a Dual-Mode architecture. A single useAuth hook abstracts the auth source, swapping live Supabase calls for an in-memory mock layer when demo mode is active." },
@@ -402,7 +402,7 @@ Every destructive action (cancel, delete, no-show) is confirmed. Form errors app
     title: "Rakuten Reimagined",
     subtitle: "A Bilingual AI-Powered Marketplace Clone",
     heroImage: project3,
-    tags: ["React", "TypeScript", "Tailwind", "Supabase", "Lovable AI"],
+    tags: ["React", "TypeScript", "Tailwind", "Supabase", "AI Gateway"],
     metrics: [
       { value: "23", label: "Code-split routes" },
       { value: "9", label: "RLS-secured Postgres tables" },
@@ -413,13 +413,13 @@ Every destructive action (cancel, delete, no-show) is confirmed. Form errors app
     ],
     overview: `Rakuten Reimagined is a portfolio-grade clone of Rakuten Ichiba, Japan's largest online marketplace. It recreates the high-density, deal-driven shopping experience Japanese users expect — crimson branding, glassmorphism, flash sales, point rewards, and a fully bilingual EN/JP interface.
 
-The platform supports three distinct roles, simulated checkout with multiple payment methods, AI-driven shopping assistance, and admin BI tools — all backed by Lovable Cloud with a persistent mock-data fallback so the app stays fully functional even when the backend is unavailable.`,
+The platform supports three distinct roles, simulated checkout with multiple payment methods, AI-driven shopping assistance, and admin BI tools — all backed by Cloud (Supabase) with a persistent mock-data fallback so the app stays fully functional even when the backend is unavailable.`,
     techStack: [
       { name: "React 18 + Vite", reason: "Fast, modular SPA with HMR and instant cold starts." },
       { name: "TypeScript", reason: "End-to-end type safety across UI, hooks, and Edge Functions." },
       { name: "Tailwind CSS + shadcn/ui", reason: "Token-driven design system with semantic HSL variables." },
-      { name: "Supabase (Lovable Cloud)", reason: "Auth, Postgres, RLS, and Edge Functions." },
-      { name: "Lovable AI Gateway", reason: "LLM access for the assistant, SEO generator, and BI insights." },
+      { name: "Supabase (Cloud (Supabase))", reason: "Auth, Postgres, RLS, and Edge Functions." },
+      { name: "AI Gateway", reason: "LLM access for the assistant, SEO generator, and BI insights." },
       { name: "Framer Motion + IntersectionObserver", reason: "Scroll-reveal and awwwards-level micro-interactions." },
       { name: "i18n Context", reason: "Custom bilingual provider for EN/JP toggling across the entire UI." },
     ],
@@ -431,7 +431,7 @@ The platform supports three distinct roles, simulated checkout with multiple pay
     ],
     features: [
       "Bilingual EN/JP UI with instant switching",
-      "AI shopping assistant (Lovable AI)",
+      "AI shopping assistant (AI Gateway)",
       "Flash sales with live countdowns",
       "Coupons (% / fixed) + point rewards",
       "Simulated multi-method checkout",
@@ -471,12 +471,12 @@ Every destructive action is confirmed via dialogs, forms validate inline, and th
     architecture: {
       frontend: "React 18 + TypeScript SPA, TanStack Query for server state, Tailwind tokens for theming.",
       backend: "Supabase (Postgres + Auth + Edge Functions); every public table protected by RLS and has_role().",
-      ai: "Lovable AI Gateway invoked from Edge Functions (no keys leaked to client).",
+      ai: "AI Gateway invoked from Edge Functions (no keys leaked to client).",
       auth: "Dual-mode: real Supabase session OR demo sign-in with persisted mock users.",
       resilience: "Persistent mock-data fallback keeps the app usable while the backend is cold-starting.",
     },
     challenges: [
-      { problem: "Cold-start latency on Lovable Cloud killed first load.", solution: "Mock-data layer hydrates instantly and silently swaps to live data once warm." },
+      { problem: "Cold-start latency on Cloud (Supabase) killed first load.", solution: "Mock-data layer hydrates instantly and silently swaps to live data once warm." },
       { problem: "Full bilingual UI without bloating components.", solution: "Single useLanguage() context + keyed string maps; every label resolves at render." },
       { problem: "Privilege escalation risk in role-gated dashboards.", solution: "Roles isolated in user_roles + non-recursive has_role() SECURITY DEFINER." },
       { problem: "Dense Rakuten layout breaking on mobile.", solution: "Responsive grids, condensed header, polished hamburger drawer — desktop density preserved." },
@@ -519,13 +519,13 @@ Every destructive action is confirmed via dialogs, forms validate inline, and th
         { name: "Supabase Postgres", description: "Products, orders, roles, reviews" },
         { name: "Supabase Auth", description: "JWT sessions, Google OAuth, demo mode" },
         { name: "Edge Functions", description: "ai-chat (assistant / seller / BI)" },
-        { name: "Lovable AI Gateway", description: "LLM provider abstraction" },
+        { name: "AI Gateway", description: "LLM provider abstraction" },
         { name: "LocalStorage", description: "Browsing history, cart, demo session, i18n preference" },
       ],
       flow: [
         "Client → React SPA (Vite-served)",
         "SPA → Supabase REST (RLS-enforced)",
-        "SPA → Edge Function → Lovable AI → response",
+        "SPA → Edge Function → AI Gateway → response",
         "SPA → Supabase Auth (sign-in, refresh, OAuth)",
         "SPA ↔ LocalStorage (cart, history, demo session, language)",
       ],
@@ -534,7 +534,7 @@ Every destructive action is confirmed via dialogs, forms validate inline, and th
       "Payments are simulated — no real PSP integration.",
       "Single-region deploy; no multi-tenant or seller-side billing.",
       "Mock-data fallback can drift from live DB during long sessions.",
-      "AI rate-limited by the Lovable AI Gateway quota.",
+      "AI rate-limited by the AI Gateway quota.",
       "Search is client-side filter; no full-text index (yet).",
     ],
     whatFailed: [
@@ -553,7 +553,7 @@ Every destructive action is confirmed via dialogs, forms validate inline, and th
     scalability: [
       "Stateless React SPA served from CDN — horizontally infinite.",
       "Supabase Postgres with read replicas for catalog queries.",
-      "Edge Functions auto-scale per request; AI calls fan out through the Lovable AI Gateway.",
+      "Edge Functions auto-scale per request; AI calls fan out through the AI Gateway.",
       "Aggressive client-side caching via TanStack Query reduces backend load.",
       "Mock-data fallback acts as a graceful-degradation layer during traffic spikes.",
     ],
@@ -744,13 +744,13 @@ Built to replace a fragmented stack of translation apps, Google Docs templates, 
     ],
     overview: `SysMonitor is a real-time observability platform that gives engineering and SRE teams a single pane of glass for system health — live CPU, memory, disk, and network metrics, structured log streaming, rule-based alerting, and AI-assisted root-cause analysis. It is designed for fast-moving teams that need to detect, diagnose, and resolve incidents before users feel them.
 
-The platform ships in two modes: a fully live backend powered by Lovable Cloud (Postgres + Realtime + Edge Functions), and a self-contained Offline Mock Demo for recruiters and stakeholders to explore the product without an account.`,
+The platform ships in two modes: a fully live backend powered by Cloud (Supabase) (Postgres + Realtime + Edge Functions), and a self-contained Offline Mock Demo for recruiters and stakeholders to explore the product without an account.`,
     techStack: [
       { name: "React 18 + Vite", reason: "Fast HMR and component-driven dashboard UI built for high-frequency data updates." },
       { name: "TypeScript", reason: "End-to-end type safety across hooks, edge functions, and Supabase-generated DB types." },
       { name: "Tailwind + shadcn/ui", reason: "Design-token-based terminal aesthetic with dark/light themes." },
       { name: "Supabase", reason: "Postgres, Realtime, Edge Functions, and Auth — RLS-secured tables and serverless compute." },
-      { name: "Lovable AI Gateway", reason: "Gemini 3 Flash powers log summarization, anomaly detection, and root-cause suggestions." },
+      { name: "AI Gateway", reason: "Gemini 3 Flash powers log summarization, anomaly detection, and root-cause suggestions." },
       { name: "Recharts + Framer Motion", reason: "Animated time-series charts, uptime heatmaps, and smooth page transitions." },
     ],
     problem: [
@@ -800,9 +800,9 @@ The auth page intentionally breaks the pattern with a refined editorial split-sc
       frontend: "React 18 SPA — dashboards, command palette, animated charts.",
       backend: "Supabase Postgres with RLS; Edge Functions (Deno) for AI orchestration.",
       realtime: "Supabase Realtime channels for log/metric/alert subscriptions.",
-      ai: "Lovable AI Gateway (Gemini 3 Flash) invoked from Edge Functions.",
+      ai: "AI Gateway (Gemini 3 Flash) invoked from Edge Functions.",
       auth: "Supabase Auth (email/password + Google OAuth) with Offline Mock Demo mode.",
-      deployment: "Lovable hosting + Supabase managed infrastructure.",
+      deployment: "CDN hosting + Supabase managed infrastructure.",
     },
     challenges: [
       { problem: "Recursive RLS policies on the roles table.", solution: "Naive policies checking user_roles from within user_roles policies cause infinite recursion. Solved with a SECURITY DEFINER function (has_role) that bypasses RLS for the lookup only." },
@@ -812,7 +812,7 @@ The auth page intentionally breaks the pattern with a refined editorial split-sc
     developmentHighlights: [
       "Built a hybrid Live/Offline architecture so the project is demoable in under 5 seconds with zero setup.",
       "Implemented a has_role SECURITY DEFINER pattern that eliminated an entire class of RLS recursion bugs.",
-      "Integrated the Lovable AI Gateway (Gemini 3 Flash) for structured JSON diagnostics — no API keys required.",
+      "Integrated the AI Gateway (Gemini 3 Flash) for structured JSON diagnostics — no API keys required.",
       "Designed a distinctive terminal aesthetic with a custom Seigaiha-wave + pulse-line favicon and full EN/JA localization.",
       "Shipped a command palette (⌘K) for keyboard-first navigation, modeled on Linear and Raycast.",
     ],
@@ -846,14 +846,14 @@ The auth page intentionally breaks the pattern with a refined editorial split-sc
         { name: "Supabase Postgres", description: "Primary data store with RLS." },
         { name: "Supabase Realtime", description: "Log/metric/alert subscriptions." },
         { name: "Edge Functions (Deno)", description: "ai-analyze, generate-logs, demo-login." },
-        { name: "Lovable AI Gateway", description: "Gemini 3 Flash inference." },
+        { name: "AI Gateway", description: "Gemini 3 Flash inference." },
         { name: "Mock Data Engine", description: "In-browser substitute for Offline Demo mode." },
       ],
       flow: [
         "Client → Supabase Auth (email/password or Google OAuth).",
         "Client → Postgres via PostgREST (RLS-filtered reads/writes).",
         "Postgres → Realtime channel → live dashboard updates.",
-        "Client → Edge Function ai-analyze → Lovable AI Gateway → structured JSON diagnostics.",
+        "Client → Edge Function ai-analyze → AI Gateway → structured JSON diagnostics.",
         "Offline Mode: Client ↔ Mock Data Engine (no network calls).",
       ],
     },
@@ -905,15 +905,15 @@ The auth page intentionally breaks the pattern with a refined editorial split-sc
       { value: "<220KB", label: "Initial JS (gzip)" },
       { value: "<1.5s", label: "TTI on mid-range Android" },
     ],
-    overview: `JapanPath (shipped as LYNT) is a production-grade, bilingual (EN / Japanese) decision-and-execution platform that helps international students, engineers and professionals plan, prepare for and execute their move to Japan — combining personalized onboarding, a JIS-compliant Rirekisho & Shokumukirekisho builder, a 30+ visa eligibility engine, a Decision Engine, a Cost-of-Living calculator and AI-assisted resume tooling powered by the Lovable AI Gateway.
+    overview: `JapanPath (shipped as LYNT) is a production-grade, bilingual (EN / Japanese) decision-and-execution platform that helps international students, engineers and professionals plan, prepare for and execute their move to Japan — combining personalized onboarding, a JIS-compliant Rirekisho & Shokumukirekisho builder, a 30+ visa eligibility engine, a Decision Engine, a Cost-of-Living calculator and AI-assisted resume tooling powered by the AI Gateway.
 
 Built solo as a B.Tech final-year project to demonstrate startup-grade product execution for Japan-based hiring managers: every flow is mobile-first, every public table is locked down with Row Level Security, and the design system is fully token-driven (Vermillion #E94E1B / Slate #1F2937, Inter + Noto Sans JP). 20+ routes · ~9,500 LOC TypeScript · 6 Postgres tables with RLS · 2 Edge Functions · 4 resume templates (JIS B5 / A4 / Soufujou cover letter). Manual research that previously consumed 40–60 hours per applicant is compressed into a single guided session.`,
     techStack: [
       { name: "React 18 + TypeScript + Vite", reason: "Type-safe SPA with fast HMR." },
       { name: "Tailwind CSS + shadcn/ui", reason: "Design-token system, Japanese palette (Vermillion #E94E1B / Sumi Slate / Washi)." },
       { name: "Framer Motion", reason: "Fluid micro-interactions, sakura petals, page transitions." },
-      { name: "Lovable Cloud (Supabase)", reason: "Postgres + Auth + Edge Functions + Storage with RLS-protected data." },
-      { name: "Lovable AI Gateway", reason: "Resume polishing, ATS review, JD-tailoring, cover-letter generation." },
+      { name: "Cloud (Supabase) (Supabase)", reason: "Postgres + Auth + Edge Functions + Storage with RLS-protected data." },
+      { name: "AI Gateway", reason: "Resume polishing, ATS review, JD-tailoring, cover-letter generation." },
       { name: "React Context + LocalStorage", reason: "Offline-first state with cloud sync (JapanPathContext, ResumeFormContext)." },
     ],
     problem: [
@@ -969,10 +969,10 @@ Built solo as a B.Tech final-year project to demonstrate startup-grade product e
     architecture: {
       frontend: "React 18 + Vite SPA, Tailwind design tokens, Framer Motion, React Context state.",
       backend: "Supabase Postgres with Row Level Security on every public table.",
-      edge: "resume-assist (Deno) calling Lovable AI Gateway.",
+      edge: "resume-assist (Deno) calling AI Gateway.",
       auth: "Supabase Auth (email + Google OAuth), JWT in httpOnly storage.",
       storage: "Buckets for avatars, banners, resume photos.",
-      deployment: "Lovable hosted preview + custom domain, CDN-cached assets.",
+      deployment: "CDN-hosted preview + custom domain, CDN-cached assets.",
     },
     challenges: [
       { problem: "Modeling Japanese resume format faithfully.", solution: "Western form libraries don't understand 年号 (Reiwa/Heisei eras) or merged Education+Work chronology. Built japanDate.ts to convert Gregorian dates to era + 年号 handling, with a single merged history table pixel-aligned to printed JIS B5." },
@@ -989,8 +989,8 @@ Built solo as a B.Tech final-year project to demonstrate startup-grade product e
       "All state auto-persists; users never lose progress on refresh.",
     ],
     database: {
-      type: "PostgreSQL (Lovable Cloud)",
-      description: "PostgreSQL via Lovable Cloud. Every public table has RLS scoped to auth.uid() and explicit GRANTs.",
+      type: "PostgreSQL (Cloud (Supabase))",
+      description: "PostgreSQL via Cloud (Supabase). Every public table has RLS scoped to auth.uid() and explicit GRANTs.",
       stores: ["profiles — display name, bio, avatar_url, banner_url, banner_theme", "user_roles — separate roles table with app_role enum and has_role() SECURITY DEFINER", "resume_versions — named drafts of full resume JSON, per user", "applications — job tracker rows", "missions_progress — gamified coaching state", "onboarding_state — JapanPathContext snapshot"],
     },
     security: [
@@ -999,7 +999,7 @@ Built solo as a B.Tech final-year project to demonstrate startup-grade product e
       "Roles in a separate user_roles table behind has_role() SECURITY DEFINER (prevents privilege escalation).",
       "httpOnly JWT session handling via Supabase client.",
       "Image upload validation (≤2 MB, type-checked) for resume photo / avatar / banner.",
-      "AI Edge Function rate-limited and key-isolated via Lovable AI Gateway — no client-side API keys.",
+      "AI Edge Function rate-limited and key-isolated via AI Gateway — no client-side API keys.",
     ],
     coreCapabilities: [
       "Personalized onboarding routing across 14+ scenarios.",
@@ -1022,10 +1022,10 @@ Built solo as a B.Tech final-year project to demonstrate startup-grade product e
         { name: "Supabase Auth", description: "Email + Google OAuth." },
         { name: "Supabase Storage", description: "Avatars / banners / resume photos." },
         { name: "Edge Function resume-assist", description: "Deno runtime." },
-        { name: "Lovable AI Gateway", description: "Gemini / GPT routing." },
+        { name: "AI Gateway", description: "Gemini / GPT routing." },
       ],
       flow: [
-        "Browser → Lovable CDN → React SPA.",
+        "Browser → CDN → React SPA.",
         "SPA → Supabase Auth (JWT).",
         "SPA → PostgREST (RLS-filtered CRUD) for profiles, resumes, applications.",
         "SPA → Storage API for image upload/download.",
@@ -1035,7 +1035,7 @@ Built solo as a B.Tech final-year project to demonstrate startup-grade product e
     limitations: [
       "Visa engine reflects publicly available rules; not legal advice.",
       "Job and university listings are curated, not real-time scraped.",
-      "AI features depend on Lovable AI Gateway availability/quota.",
+      "AI features depend on AI Gateway availability/quota.",
       "No native mobile app yet — PWA-style only.",
       "Single-language UI per session (EN with JP labels); full localization pending.",
     ],
@@ -1057,7 +1057,7 @@ Built solo as a B.Tech final-year project to demonstrate startup-grade product e
       "Stateless React SPA served from CDN — horizontally infinite.",
       "Supabase Postgres with read replicas for heavy analytics queries.",
       "Edge Functions auto-scale per region (low cold-start Deno runtime).",
-      "AI calls funneled through Lovable AI Gateway with caching of identical prompts.",
+      "AI calls funneled through AI Gateway with caching of identical prompts.",
       "Image assets resized & served via Supabase Storage transformations + CDN cache.",
     ],
     learningPoints: [
