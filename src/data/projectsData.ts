@@ -159,8 +159,8 @@ Every destructive action (delete employee, remove task) requires confirmation. F
     ],
     screenshots: [project1, project2, project3],
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://teamhub.tanmaytrivedi.dev",
+    githubUrl: "https://github.com/iTanmayTrivedi/TeamManagementSystemJapan",
     architecturalDiagram: {
       components: [
         { name: "React SPA", description: "Vite, React Router, shadcn/ui, custom hooks" },
@@ -339,8 +339,8 @@ Every destructive action (cancel, delete, no-show) is confirmed. Form errors app
     ],
     screenshots: [project2, project3, project4],
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://bookflow.tanmaytrivedi.dev",
+    githubUrl: "https://github.com/iTanmayTrivedi/ServiceScheduleJapan",
     architecturalDiagram: {
       components: [
         { name: "React SPA", description: "TypeScript, Vite, Tailwind, shadcn/ui." },
@@ -511,8 +511,8 @@ Every destructive action is confirmed via dialogs, forms validate inline, and th
     ],
     screenshots: [project3, project1, project2],
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://rakuten.tanmaytrivedi.dev",
+    githubUrl: "https://github.com/iTanmayTrivedi/RakutenJapan",
     architecturalDiagram: {
       components: [
         { name: "React SPA", description: "Vite, TanStack Query, Tailwind tokens" },
@@ -674,8 +674,8 @@ Built to replace a fragmented stack of translation apps, Google Docs templates, 
     ],
     screenshots: [project4, project2, project1],
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://globaldashboard.tanmaytrivedi.dev",
+    githubUrl: "https://github.com/iTanmayTrivedi/GlobalSaaSDashboardJapan",
     architecturalDiagram: {
       components: [
         { name: "React SPA (Vite)", description: "UI & client state" },
@@ -838,8 +838,8 @@ The auth page intentionally breaks the pattern with a refined editorial split-sc
     ],
     screenshots: [project5, project1, project3],
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://sysmonitor.tanmaytrivedi.dev",
+    githubUrl: "https://github.com/iTanmayTrivedi/SystemMonitoringJapan",
     architecturalDiagram: {
       components: [
         { name: "React SPA", description: "Dashboards, command palette, animated charts." },
@@ -893,8 +893,8 @@ The auth page intentionally breaks the pattern with a refined editorial split-sc
   // 6. JapanPath (also featured as LYNT) — Japan Career Path Platform
   "mediconnect": {
     id: 6,
-    title: "JapanPath",
-    subtitle: "Bilingual Relocation & Career OS for International Talent (the LYNT case study)",
+    title: "Lynt",
+    subtitle: "Bilingual Relocation & Career OS for International Talent",
     heroImage: project6,
     tags: ["React 18", "TypeScript", "Supabase", "Gemini 2.5 Flash", "Framer Motion", "AI Gateway"],
     metrics: [
