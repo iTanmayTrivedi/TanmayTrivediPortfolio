@@ -897,19 +897,6 @@ const ProjectDetail = () => {
           </div>
         </AnimatedSection>
 
-        {/* 1️⃣2️⃣ Application Interface */}
-        <AnimatedSection className="container mx-auto px-4 sm:px-6 lg:px-12 mb-24">
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-sm tracking-widest uppercase text-muted-foreground mb-4"
-          >
-            {t("projectDetail.gallery")}
-          </motion.p>
-          <h2 className="text-3xl sm:text-4xl font-bold mb-12">Application Interface</h2>
-          <ScreenshotGallery screenshots={project.screenshots} title={project.title} />
-        </AnimatedSection>
 
         {/* 1️⃣3️⃣ Live Demo + GitHub */}
         <AnimatedSection className="container mx-auto px-4 sm:px-6 lg:px-12 mb-24">
