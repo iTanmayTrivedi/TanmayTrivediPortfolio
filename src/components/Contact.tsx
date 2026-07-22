@@ -4,8 +4,8 @@ import { Github, Linkedin, FileText, Copy, Check, Instagram } from "lucide-react
 import { useLanguage } from "@/contexts/LanguageContext";
 import ContactForm from "./ContactForm";
 import lineQrCode from "@/assets/line-qr.jpeg";
-import resumeEn from "@/assets/resume-en.pdf.asset.json";
-import resumeJa from "@/assets/resume-rirekisho.pdf.asset.json";
+import resumeEn from "@/assets/resume-en.pdf";
+import resumeJa from "@/assets/resume-rirekisho.pdf";
 
 const XIcon = ({ size = 20 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
@@ -148,7 +148,7 @@ const Contact = () => {
               className="flex flex-wrap gap-4 sm:gap-6 mt-8 sm:mt-12"
             >
               <motion.a
-                href={resumeEn.url}
+                href={resumeEn}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative inline-flex items-center gap-3 px-8 py-4 bg-background text-foreground font-medium tracking-wide overflow-hidden text-sm sm:text-base"
@@ -169,7 +169,7 @@ const Contact = () => {
                 <motion.span className="relative z-10" initial={{ x: 0 }} whileHover={{ x: 5 }}>→</motion.span>
               </motion.a>
               <motion.a
-                href={resumeJa.url}
+                href={resumeJa}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative inline-flex items-center gap-3 px-8 py-4 border-2 border-background text-background font-medium tracking-wide overflow-hidden text-sm sm:text-base"

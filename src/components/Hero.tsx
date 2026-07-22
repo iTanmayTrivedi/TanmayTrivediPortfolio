@@ -2,8 +2,8 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence, useMotionValue, useSpring } from "framer-motion";
 import { FileText } from "lucide-react";
 import finderIcon from "@/assets/finder-icon.png";
-import resumeEn from "@/assets/resume-en.pdf.asset.json";
-import resumeJa from "@/assets/resume-rirekisho.pdf.asset.json";
+import resumeEn from "@/assets/resume-en.pdf";
+import resumeJa from "@/assets/resume-rirekisho.pdf";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const timeZones = [
@@ -491,7 +491,7 @@ const Hero = () => {
         >
           <motion.a
             variants={fadeInVariants}
-            href={resumeEn.url}
+            href={resumeEn}
             target="_blank"
             rel="noopener noreferrer"
             className="group relative inline-flex items-center gap-3 px-8 py-4 bg-foreground text-background font-medium tracking-wide overflow-hidden text-sm sm:text-base"
@@ -522,7 +522,7 @@ const Hero = () => {
           </motion.a>
           <motion.a
             variants={fadeInVariants}
-            href={resumeJa.url}
+            href={resumeJa}
             target="_blank"
             rel="noopener noreferrer"
             className="group relative inline-flex items-center gap-3 px-8 py-4 border-2 border-foreground text-foreground font-medium tracking-wide overflow-hidden text-sm sm:text-base"

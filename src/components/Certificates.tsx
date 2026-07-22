@@ -13,9 +13,9 @@ import certGenAi from "@/assets/cert-simplilearn-genai.png";
 import certMcp from "@/assets/cert-anthropic-mcp.png";
 import certAppleAds from "@/assets/cert-apple-ads.png";
 import certAppleTeacher from "@/assets/cert-apple-teacher.png";
-import certAwsAsset from "@/assets/cert-aws-s3.png.asset.json";
-import certCnnAsset from "@/assets/cert-cnn-tf.png.asset.json";
-import certAzureAsset from "@/assets/cert-azure-cv.png.asset.json";
+import certAwsAsset from "@/assets/cert-aws-s3.png";
+import certCnnAsset from "@/assets/cert-cnn-tf.png";
+import certAzureAsset from "@/assets/cert-azure-cv.png";
 
 import logoMicrosoft from "@/assets/logo-microsoft.webp";
 import logoHelsinki from "@/assets/logo-helsinki.png";
@@ -28,9 +28,9 @@ import logoSimplilearn from "@/assets/logo-simplilearn.avif";
 import logoCoursera from "@/assets/logo-coursera.png";
 import logoAws from "@/assets/logo-aws.png";
 
-const certAwsS3 = certAwsAsset.url;
-const certCnnTf = certCnnAsset.url;
-const certAzureCv = certAzureAsset.url;
+const certAwsS3 = certAwsAsset;
+const certCnnTf = certCnnAsset;
+const certAzureCv = certAzureAsset;
 
 interface Cert {
   id: string;
