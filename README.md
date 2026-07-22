@@ -93,7 +93,56 @@ Bilingual appointment & reservation platform with AI scheduling and dual demo mo
 
 <br/>
 
+<<<<<<< HEAD
 ## 　参　·　活動　·　Signal
+=======
+---
+
+<div align="center"><sub>　参　&nbsp;·&nbsp; STRUCTURE　/　構 成　</sub></div>
+
+```text
+src/
+├─ assets/              static images, certificates, resumes
+├─ components/          composable UI (Hero, Projects, LyntSection, …)
+│  └─ ui/               shadcn primitives
+├─ contexts/            LanguageContext (EN ↔ JP)
+├─ data/                projectsData.ts — case-study source of truth
+├─ hooks/               use-mobile, use-toast
+├─ pages/               Index · ProjectDetail · NotFound
+└─ index.css            design tokens, theme, semantic palette
+```
+
+<br/>
+
+---
+
+<div align="center"><sub>　肆　&nbsp;·&nbsp; LOCAL DEVELOPMENT　/　開 発　</sub></div>
+
+```bash
+# 1 · install
+bun install            # or  npm install
+
+# 2 · run dev server
+bun run dev            # vite at http://localhost:5173
+
+# 3 · build & preview
+bun run build
+bun run preview
+
+# 4 · test
+bunx vitest run
+```
+
+> Lovable Cloud is provisioned automatically through the Lovable editor — no `.env` setup is required when forking inside Lovable.
+
+<br/>
+
+---
+
+<div align="center"><sub>　伍　&nbsp;·&nbsp; CASE STUDIES INCLUDED　/　事 例　</sub></div>
+
+<br/>
+>>>>>>> 7945abf2a8caae38cb03fdb17d8708eb7181e8b6
 
 <div align="center">
 

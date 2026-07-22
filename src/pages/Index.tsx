@@ -15,6 +15,7 @@ import CustomCursor from "@/components/CustomCursor";
 import Preloader from "@/components/Preloader";
 import LyntSection from "@/components/LyntSection";
 import FrontendExperiments from "@/components/FrontendExperiments";
+import YukiSection from "@/components/YukiSection";
 
 const Index = () => {
   // Only show preloader on first visit, not when navigating back
@@ -81,6 +82,9 @@ const Index = () => {
             </motion.div>
             <motion.div variants={itemVariants}>
               <Projects />
+            </motion.div>
+            <motion.div variants={itemVariants}>
+              <YukiSection />
             </motion.div>
             <motion.div variants={itemVariants}>
               <FrontendExperiments />

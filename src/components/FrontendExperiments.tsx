@@ -19,35 +19,50 @@ const experiments: Experiment[] = [
   {
     id: 1,
     title: "Terminal Velocity",
-    titleJa: "終端速度",
+    titleJa: "Terminal Velocity",
+    description: "",
+    descriptionJa: "",
     tags: ["React", "Framer Motion", "TypeScript"],
     githubUrl: "https://github.com/iTanmayTrivedi/terminalvelocity",
-    liveUrl: "https://terminalvelocity.tanmaytrivedi.dev/",
+    liveUrl: "https://terminalvelocity.tanmaytrivedi.dev",
+    gradient:
+      "linear-gradient(135deg, hsl(var(--foreground)) 0%, hsl(var(--muted-foreground)) 100%)",
   },
-  
   {
     id: 2,
-    title: "MyCozyCorner",
-    titleJa: "私の居心地の良い場所",
+    title: "My Cozy Corner",
+    titleJa: "My Cozy Corner",
+    description: "",
+    descriptionJa: "",
     tags: ["R3F", "GLSL", "WebGL"],
     githubUrl: "https://github.com/iTanmayTrivedi/mycozycorner",
-    liveUrl: "https://mycozycorner.tanmaytrivedi.dev/",
+    liveUrl: "https://mycozycorner.tanmaytrivedi.dev",
+    gradient:
+      "linear-gradient(135deg, hsl(var(--muted-foreground)) 0%, hsl(var(--foreground)) 100%)",
   },
   {
     id: 3,
     title: "Yohaku",
-    titleJa: "ヨハク",
+    titleJa: "余白",
+    description: "",
+    descriptionJa: "",
     tags: ["Variable Fonts", "CSS", "i18n"],
-    githubUrl: "https://github.com/iTanmayTrivedi/yohaku",
-    liveUrl: "https://yohaku.tanmaytrivedi.dev/",
+    githubUrl: "https://github.com/iTanmayTrivedi/Yohaku",
+    liveUrl: "https://yohaku.tanmaytrivedi.dev",
+    gradient:
+      "linear-gradient(160deg, hsl(var(--foreground)) 0%, hsl(var(--secondary)) 100%)",
   },
   {
     id: 4,
     title: "Kimi ni Todoke",
     titleJa: "君に届け",
-    tags: ["WebGL"],
+    description: "",
+    descriptionJa: "",
+    tags: ["Deno", "AI Gateway", "Zod"],
     githubUrl: "https://github.com/iTanmayTrivedi/Kimi-ni-todoke",
-    liveUrl: "https://kiminitodoke.tanmaytrivedi.dev/",
+    liveUrl: "https://kiminitodoke.tanmaytrivedi.dev",
+    gradient:
+      "linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--foreground)) 100%)",
   },
 ];
 
@@ -87,11 +102,7 @@ const ExperimentCard = ({ exp, index }: { exp: Experiment; index: number }) => {
         <h3 className="text-xl sm:text-2xl font-semibold tracking-tight">
           {language === "ja" ? exp.titleJa : exp.title}
         </h3>
-        <p className="mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed flex-1">
-          {language === "ja" ? exp.descriptionJa : exp.description}
-        </p>
-
-        <div className="mt-5 flex flex-wrap gap-2">
+        <div className="mt-5 flex flex-wrap gap-2 flex-1">
           {exp.tags.map((tag) => (
             <span
               key={tag}

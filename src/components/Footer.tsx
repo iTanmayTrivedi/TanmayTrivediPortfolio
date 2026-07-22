@@ -10,10 +10,11 @@ const AnimatedName = () => {
   return (
     <div ref={ref} className="relative inline-block w-full">
       <h2
-        className="leading-[1.05] whitespace-nowrap text-center pb-6 select-none"
+        className="leading-[1.05] whitespace-nowrap text-center pb-6 select-none tracking-tight font-semibold"
         style={{
-          fontFamily: '"Homemade Apple", "Snell Roundhand", "Apple Chancery", cursive',
-          fontSize: 'clamp(3.5rem, 14vw, 16rem)',
+          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif',
+          fontSize: 'clamp(2.5rem, 11vw, 12rem)',
+          letterSpacing: '-0.04em',
         }}
       >
         <motion.span

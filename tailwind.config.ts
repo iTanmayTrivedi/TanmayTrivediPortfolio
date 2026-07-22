@@ -86,6 +86,10 @@ export default {
           "0%": { transform: "translateY(100%)" },
           "100%": { transform: "translateY(0)" },
         },
+        "lynt-marquee": {
+          "0%": { transform: "translate3d(0,0,0)" },
+          "100%": { transform: "translate3d(-50%,0,0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",

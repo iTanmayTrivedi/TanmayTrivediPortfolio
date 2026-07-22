@@ -576,20 +576,7 @@ const Hero = () => {
           ))}
         </motion.div>
 
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2, duration: 0.6 }}
-          className="fixed left-6 lg:left-12 bottom-1/4 hidden lg:flex flex-col items-center gap-2"
-        >
-          <motion.div
-            className="w-px h-16 bg-foreground/30 origin-top"
-            animate={{ scaleY: [0, 1, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          />
-          <span className="scroll-indicator text-muted-foreground">{t("hero.scroll")}</span>
-        </motion.div>
+        {/* Scroll indicator removed */}
 
         {/* Creative Japanese-Inspired Interactive Visual */}
         <motion.div

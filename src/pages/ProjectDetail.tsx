@@ -348,10 +348,6 @@ const ProjectDetail = () => {
           </motion.p>
         </AnimatedSection>
 
-        {/* Hero - Device Mockups with simulated screens for all projects */}
-        <AnimatedSection className="container mx-auto px-4 sm:px-6 lg:px-12 mb-24" delay={0.2}>
-          <DeviceMockups screenshots={project.screenshots} title={project.title} projectSlug={slug} />
-        </AnimatedSection>
 
         {/* Project Number Badge */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-12 mb-16">
@@ -464,36 +460,6 @@ const ProjectDetail = () => {
           </div>
         </AnimatedSection>
 
-        {/* 3️⃣ Video Walkthrough */}
-        {project.videoUrl && (
-          <AnimatedSection className="container mx-auto px-4 sm:px-6 lg:px-12 mb-24" delay={0.1}>
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className="text-sm tracking-widest uppercase text-muted-foreground mb-4"
-            >
-              DEMO
-            </motion.p>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-8">Video Walkthrough</h2>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.98 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative w-full max-w-4xl overflow-hidden border border-foreground/10 bg-secondary/30"
-              style={{ aspectRatio: '16/9' }}
-            >
-              <iframe
-                src={project.videoUrl}
-                title={`${project.title} Demo`}
-                className="absolute inset-0 w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </motion.div>
-          </AnimatedSection>
-        )}
 
         {/* 4️⃣ Problem & Motivation */}
         <AnimatedSection className="container mx-auto px-4 sm:px-6 lg:px-12 mb-24">
@@ -931,19 +897,6 @@ const ProjectDetail = () => {
           </div>
         </AnimatedSection>
 
-        {/* 1️⃣2️⃣ Application Interface */}
-        <AnimatedSection className="container mx-auto px-4 sm:px-6 lg:px-12 mb-24">
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-sm tracking-widest uppercase text-muted-foreground mb-4"
-          >
-            {t("projectDetail.gallery")}
-          </motion.p>
-          <h2 className="text-3xl sm:text-4xl font-bold mb-12">Application Interface</h2>
-          <ScreenshotGallery screenshots={project.screenshots} title={project.title} />
-        </AnimatedSection>
 
         {/* 1️⃣3️⃣ Live Demo + GitHub */}
         <AnimatedSection className="container mx-auto px-4 sm:px-6 lg:px-12 mb-24">

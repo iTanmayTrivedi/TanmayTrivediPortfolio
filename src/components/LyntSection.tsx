@@ -158,23 +158,17 @@ const LyntSection = () => {
     target: sectionRef,
     offset: ["start end", "end start"],
   });
-  const bgY = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
   const wordmarkScale = useTransform(scrollYProgress, [0, 0.4], [0.92, 1]);
-  const marqueeX = useTransform(scrollYProgress, [0, 1], ["0%", "-40%"]);
 
   return (
     <section
       ref={sectionRef}
       id="lynt"
       aria-label="LYNT — Founder spotlight"
-      className="relative overflow-hidden bg-foreground text-background"
+      className="relative overflow-hidden bg-foreground text-background [contain:paint]"
     >
-      {/* Atmospheric backdrop — aurora + grid + edge hairlines */}
-      <motion.div
-        aria-hidden
-        style={{ y: bgY }}
-        className="pointer-events-none absolute inset-0"
-      >
+      {/* Atmospheric backdrop — aurora + grid + edge hairlines (static = no per-frame repaint) */}
+      <div aria-hidden className="pointer-events-none absolute inset-0">
         <div
           className="absolute inset-0 opacity-[0.10]"
           style={{
@@ -202,62 +196,34 @@ const LyntSection = () => {
           className="absolute inset-x-0 bottom-0 h-px"
           style={{ background: "linear-gradient(90deg, transparent, hsl(var(--background)/0.25), transparent)" }}
         />
-      </motion.div>
+      </div>
 
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-12 py-24 sm:py-32 lg:py-40">
-        {/* Top meta strip */}
-        <motion.div
-          ref={headerRef}
-          initial={{ opacity: 0, y: 20 }}
-          animate={isHeaderInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6 }}
-          className="flex items-center justify-between gap-6 text-[11px] tracking-[0.3em] uppercase"
-        >
-          <div className="flex items-center gap-3 text-background/70">
-            <span className="h-px w-10 bg-background/40" />
-            {language === "ja" ? "創業プロダクト" : "Founder Product"}
-            <span className="opacity-40">·</span>
-            {language === "ja" ? "ケーススタディ v2" : "Case Study v2"}
-          </div>
-          <div className="hidden sm:inline-flex items-center gap-2 rounded-full border border-background/15 bg-background/[0.04] backdrop-blur-md px-3 py-1.5 text-background/80">
-            <span className="relative flex h-1.5 w-1.5">
-              <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60 animate-ping" />
-              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400" />
-            </span>
-            {language === "ja" ? "稼働中 — プレビュー" : "Live — Preview"}
-          </div>
-        </motion.div>
+        {/* Top meta strip removed for cleaner layout */}
+        <div ref={headerRef} />
 
-        {/* Wordmark with gradient sheen + shimmer */}
+        {/* Wordmark — Apple-store style per-letter glow on hover */}
         <motion.h2
           style={{ scale: wordmarkScale }}
           initial={{ opacity: 0, y: 40 }}
           animate={isHeaderInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-10 font-bold tracking-[-0.06em] leading-[0.85] text-[18vw] sm:text-[16vw] lg:text-[13vw] relative overflow-hidden"
+          className="lynt-wordmark group mt-10 font-bold tracking-[-0.06em] leading-[0.85] text-[18vw] sm:text-[16vw] lg:text-[13vw] relative [will-change:transform] cursor-default transition-[letter-spacing] duration-700 hover:tracking-[-0.055em]"
         >
-          <span
-            className="bg-clip-text text-transparent"
-            style={{
-              backgroundImage:
-                "linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--background)/0.78) 60%, hsl(var(--background)/0.55) 100%)",
-            }}
-          >
-            LYNT
-          </span>
+          {"LYNT".split("").map((ch, i) => (
+            <span
+              key={i}
+              className="lynt-letter inline-block transition-all duration-500 ease-out hover:-translate-y-[0.015em]"
+              style={{
+                color: "hsl(var(--background))",
+                textShadow: "0 0 0 rgba(255,255,255,0)",
+                transitionProperty: "text-shadow, transform, color, filter",
+              }}
+            >
+              {ch}
+            </span>
+          ))}
           <span className="text-background/35">.</span>
-          <motion.span
-            aria-hidden
-            initial={{ x: "-120%" }}
-            animate={{ x: "220%" }}
-            transition={{ duration: 6, repeat: Infinity, ease: "linear", repeatDelay: 1.5 }}
-            className="pointer-events-none absolute inset-y-0 w-1/3 mix-blend-overlay"
-            style={{
-              background:
-                "linear-gradient(90deg, transparent, hsl(var(--background)/0.55), transparent)",
-              filter: "blur(20px)",
-            }}
-          />
         </motion.h2>
 
         <motion.div
@@ -273,7 +239,7 @@ const LyntSection = () => {
           </p>
           {/* Premium glass meta card */}
           <div className="lg:col-span-4">
-            <div className="relative rounded-2xl border border-background/15 bg-background/[0.04] backdrop-blur-md p-5 overflow-hidden">
+            <div className="relative rounded-2xl border border-background/15 bg-background/[0.04] p-5 overflow-hidden">
               <div
                 aria-hidden
                 className="absolute inset-x-0 -top-px h-px"
@@ -286,11 +252,11 @@ const LyntSection = () => {
               <div className="mt-4 grid grid-cols-2 gap-3 text-sm">
                 <div>
                   <div className="text-background/40 text-[10px] tracking-[0.22em] uppercase">{language === "ja" ? "役割" : "Role"}</div>
-                  <div className="mt-1 text-background/90">B.Tech CSE · 2026{language === "ja" ? "新卒" : " grad"}</div>
+                  <div className="mt-1 text-background/90">{language === "ja" ? "フルスタック開発者 · 創業者 · 2029新卒" : "Full-Stack Developer · Founder · 2029 grad"}</div>
                 </div>
                 <div>
                   <div className="text-background/40 text-[10px] tracking-[0.22em] uppercase">{language === "ja" ? "対象面" : "Surface"}</div>
-                  <div className="mt-1 text-background/90">Web · iOS-class polish</div>
+                  <div className="mt-1 text-background/90">{language === "ja" ? "Web · 用の美 (yō-no-bi)" : "Web · 用の美 — yō-no-bi craft"}</div>
                 </div>
                 <div className="col-span-2">
                   <div className="text-background/40 text-[10px] tracking-[0.22em] uppercase">Stack</div>
@@ -309,7 +275,7 @@ const LyntSection = () => {
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           className="mt-16 sm:mt-20"
         >
-          <div className="relative rounded-[28px] border border-background/15 bg-background/[0.03] backdrop-blur-xl overflow-hidden shadow-[0_40px_120px_-40px_rgba(0,0,0,0.6)]">
+          <div className="relative rounded-[28px] border border-background/15 bg-background/[0.03] overflow-hidden shadow-[0_40px_120px_-40px_rgba(0,0,0,0.6)]">
             <div
               aria-hidden
               className="pointer-events-none absolute -inset-px rounded-[28px]"
@@ -389,7 +355,7 @@ const LyntSection = () => {
           <div className="text-[11px] tracking-[0.3em] uppercase text-background/55 mb-6">
             {language === "ja" ? "数字で見るLYNT" : "By the numbers"}
           </div>
-          <div className="rounded-3xl border border-background/15 overflow-hidden bg-background/[0.02] backdrop-blur-sm">
+          <div className="rounded-3xl border border-background/15 overflow-hidden bg-background/[0.02]">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-background/10">
               {metrics.map((m, i) => (
                 <motion.div
@@ -435,9 +401,8 @@ const LyntSection = () => {
             className="pointer-events-none absolute inset-y-0 right-0 w-24 z-10"
             style={{ background: "linear-gradient(-90deg, hsl(var(--foreground)), transparent)" }}
           />
-          <motion.div
-            style={{ x: marqueeX }}
-            className="flex gap-12 whitespace-nowrap text-sm sm:text-base tracking-[0.15em] uppercase text-background/55"
+          <div
+            className="flex gap-12 whitespace-nowrap text-sm sm:text-base tracking-[0.15em] uppercase text-background/55 animate-[lynt-marquee_45s_linear_infinite] [will-change:transform]"
           >
             {Array.from({ length: 2 }).map((_, k) => (
               <div key={k} className="flex gap-12">
@@ -455,7 +420,7 @@ const LyntSection = () => {
                 <span className="opacity-30">◆</span>
               </div>
             ))}
-          </motion.div>
+          </div>
         </div>
 
 
@@ -479,7 +444,7 @@ const LyntSection = () => {
             </div>
             <div className="hidden sm:block text-sm text-background/55 tabular-nums font-mono">06 / 12</div>
           </div>
-          <div className="rounded-3xl border border-background/15 overflow-hidden bg-background/[0.02] backdrop-blur-sm">
+          <div className="rounded-3xl border border-background/15 overflow-hidden bg-background/[0.02]">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-background/10">
               {featureGrid.map((f, i) => (
                 <motion.div
@@ -554,7 +519,7 @@ const LyntSection = () => {
           transition={{ duration: 0.7 }}
           className="mt-32 sm:mt-40 relative"
         >
-          <div className="relative rounded-3xl border border-background/15 bg-background/[0.03] backdrop-blur-xl overflow-hidden p-8 sm:p-12">
+          <div className="relative rounded-3xl border border-background/15 bg-background/[0.03] overflow-hidden p-8 sm:p-12">
             <div
               aria-hidden
               className="pointer-events-none absolute inset-0"
@@ -583,7 +548,7 @@ const LyntSection = () => {
                 onClick={() => navigate("/project/mediconnect")}
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.98 }}
-                className="group relative inline-flex items-center gap-4 bg-background text-foreground rounded-full pl-7 pr-3 py-3 text-sm sm:text-base font-medium tracking-tight shadow-[0_20px_60px_-20px_rgba(255,255,255,0.35)]"
+                className="group relative inline-flex items-center gap-4 bg-background text-foreground rounded-full pl-7 pr-3 py-3 text-sm sm:text-base font-medium tracking-tight shadow-none hover:shadow-[0_20px_60px_-20px_rgba(255,255,255,0.35)] transition-shadow duration-500"
               >
                 <span
                   aria-hidden

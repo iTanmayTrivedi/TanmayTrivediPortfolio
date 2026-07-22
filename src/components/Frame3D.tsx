@@ -44,17 +44,17 @@ const Frame3D = ({ children, className = "", maxWidthClass = "" }: Frame3DProps)
       style={{ perspective: 1000 }}
     >
       {[
-        "-top-4 -left-4 border-l-2 border-t-2",
-        "-top-4 -right-4 border-r-2 border-t-2",
-        "-bottom-4 -left-4 border-l-2 border-b-2",
-        "-bottom-4 -right-4 border-r-2 border-b-2",
+        "-top-2 -left-2 sm:-top-4 sm:-left-4 border-l-2 border-t-2",
+        "-top-2 -right-2 sm:-top-4 sm:-right-4 border-r-2 border-t-2",
+        "-bottom-2 -left-2 sm:-bottom-4 sm:-left-4 border-l-2 border-b-2",
+        "-bottom-2 -right-2 sm:-bottom-4 sm:-right-4 border-r-2 border-b-2",
       ].map((pos, i) => {
         const isRight = pos.includes("right");
         const isBottom = pos.includes("bottom");
         return (
           <motion.div
             key={i}
-            className={`absolute ${pos} w-12 h-12 border-foreground/40 z-10 pointer-events-none`}
+            className={`absolute ${pos} w-8 h-8 sm:w-12 sm:h-12 border-foreground/40 z-10 pointer-events-none`}
             animate={{
               x: isHovered ? (isRight ? 4 : -4) : 0,
               y: isHovered ? (isBottom ? 4 : -4) : 0,

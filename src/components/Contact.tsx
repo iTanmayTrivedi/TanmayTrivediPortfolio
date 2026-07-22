@@ -1,11 +1,17 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
-import { Github, Linkedin, FileText, Copy, Check, Instagram } from "lucide-react";
+import { Github, Linkedin, FileText, Copy, Check } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import ContactForm from "./ContactForm";
 import lineQrCode from "@/assets/line-qr.jpeg";
+<<<<<<< HEAD
 import resumeEn from "@/assets/resume-en.pdf";
 import resumeJa from "@/assets/resume-rirekisho.pdf";
+=======
+import resumeEn from "@/assets/resume-en.pdf.asset.json";
+import resumeJa from "@/assets/resume-rirekisho.pdf.asset.json";
+import blogLogo from "@/assets/blog-logo.png.asset.json";
+>>>>>>> 7945abf2a8caae38cb03fdb17d8708eb7181e8b6
 
 const XIcon = ({ size = 20 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
@@ -17,6 +23,26 @@ const LineIcon = ({ size = 20 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
     <path d="M12 1C5.8 1 .8 5.1.8 10.2c0 4.5 4 8.3 9.4 9-.4.1.3.7.3 1v1.7c0 .5.3.8.7.8.2 0 .4-.1.7-.2 1.2-.7 6.5-3.8 8.9-6.5 1.6-1.8 2.4-3.6 2.4-5.8C23.2 5.1 18.2 1 12 1zM8.3 12.7H6.5c-.3 0-.5-.2-.5-.5V8.1c0-.3.2-.5.5-.5s.5.2.5.5v3.6h1.3c.3 0 .5.2.5.5s-.2.5-.5.5zm2.1-.5c0 .3-.2.5-.5.5s-.5-.2-.5-.5V8.1c0-.3.2-.5.5-.5s.5.2.5.5v4.1zm5 0c0 .2-.1.4-.3.5-.1 0-.1.1-.2.1-.1 0-.3-.1-.4-.2L12.2 9.8v2.4c0 .3-.2.5-.5.5s-.5-.2-.5-.5V8.1c0-.2.1-.4.3-.5.1 0 .3 0 .5.1l2.4 2.8V8.1c0-.3.2-.5.5-.5s.5.2.5.5v4.1zm3.1-2.6c.3 0 .5.2.5.5s-.2.5-.5.5h-1.3v1h1.3c.3 0 .5.2.5.5s-.2.5-.5.5h-1.8c-.3 0-.5-.2-.5-.5V8.1c0-.3.2-.5.5-.5h1.8c.3 0 .5.2.5.5s-.2.5-.5.5h-1.3v1h1.3z" />
   </svg>
+);
+
+const BlogIcon = ({ size = 20 }: { size?: number }) => (
+  <span
+    aria-hidden="true"
+    style={{
+      width: size,
+      height: size,
+      display: "block",
+      backgroundColor: "currentColor",
+      WebkitMaskImage: `url(${blogLogo.url})`,
+      maskImage: `url(${blogLogo.url})`,
+      WebkitMaskRepeat: "no-repeat",
+      maskRepeat: "no-repeat",
+      WebkitMaskPosition: "center",
+      maskPosition: "center",
+      WebkitMaskSize: "contain",
+      maskSize: "contain",
+    }}
+  />
 );
 
 const EMAIL = "tanmay.trivedi.jp@gmail.com";
@@ -211,8 +237,7 @@ const Contact = () => {
                     { name: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/in/itanmaytrivedi", iconSize: 20 },
                     { name: "GitHub", icon: Github, href: "https://github.com/itanmaytrivedi", iconSize: 20 },
                     { name: "LINE", icon: LineIcon, href: "https://line.me/ti/p/bK65DKm_vR", iconSize: 26 },
-                    { name: "X", icon: XIcon, href: "https://x.com/iTanmayTrivedi", iconSize: 20 },
-                    { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/itanmaytrivedi/", iconSize: 20 },
+                    { name: "Blog", icon: BlogIcon, href: "#", iconSize: 20 },
                   ].map((social) => {
                     const InteractiveIcon = (
                       <motion.a
