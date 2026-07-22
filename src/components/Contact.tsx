@@ -8,9 +8,9 @@ import lineQrCode from "@/assets/line-qr.jpeg";
 import resumeEn from "@/assets/resume-en.pdf";
 import resumeJa from "@/assets/resume-rirekisho.pdf";
 =======
-import resumeEn from "@/assets/resume-en.pdf.asset.json";
-import resumeJa from "@/assets/resume-rirekisho.pdf.asset.json";
-import blogLogo from "@/assets/blog-logo.png.asset.json";
+import resumeEn from "@/assets/resume-en.pdf";
+import resumeJa from "@/assets/resume-rirekisho.pdf";
+import blogLogo from "@/assets/blog-logo.png";
 >>>>>>> 7945abf2a8caae38cb03fdb17d8708eb7181e8b6
 
 const XIcon = ({ size = 20 }: { size?: number }) => (
@@ -33,8 +33,8 @@ const BlogIcon = ({ size = 20 }: { size?: number }) => (
       height: size,
       display: "block",
       backgroundColor: "currentColor",
-      WebkitMaskImage: `url(${blogLogo.url})`,
-      maskImage: `url(${blogLogo.url})`,
+      WebkitMaskImage: `url(${blogLogo})`,
+      maskImage: `url(${blogLogo})`,
       WebkitMaskRepeat: "no-repeat",
       maskRepeat: "no-repeat",
       WebkitMaskPosition: "center",
