@@ -19,26 +19,6 @@ const LineIcon = ({ size = 20 }: { size?: number }) => (
   </svg>
 );
 
-const BlogIcon = ({ size = 20 }: { size?: number }) => (
-  <span
-    aria-hidden="true"
-    style={{
-      width: size,
-      height: size,
-      display: "block",
-      backgroundColor: "currentColor",
-      WebkitMaskImage: `url(${blogLogo})`,
-      maskImage: `url(${blogLogo})`,
-      WebkitMaskRepeat: "no-repeat",
-      maskRepeat: "no-repeat",
-      WebkitMaskPosition: "center",
-      maskPosition: "center",
-      WebkitMaskSize: "contain",
-      maskSize: "contain",
-    }}
-  />
-);
-
 const EMAIL = "tanmay.trivedi.jp@gmail.com";
 
 const CopyableEmail = () => {
@@ -231,7 +211,6 @@ const Contact = () => {
                     { name: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/in/itanmaytrivedi", iconSize: 20 },
                     { name: "GitHub", icon: Github, href: "https://github.com/itanmaytrivedi", iconSize: 20 },
                     { name: "LINE", icon: LineIcon, href: "https://line.me/ti/p/bK65DKm_vR", iconSize: 26 },
-                    { name: "Blog", icon: BlogIcon, href: "#", iconSize: 20 },
                   ].map((social) => {
                     const InteractiveIcon = (
                       <motion.a
