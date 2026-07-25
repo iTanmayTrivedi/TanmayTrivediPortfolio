@@ -4,14 +4,8 @@ import { Github, Linkedin, FileText, Copy, Check } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import ContactForm from "./ContactForm";
 import lineQrCode from "@/assets/line-qr.jpeg";
-<<<<<<< HEAD
 import resumeEn from "@/assets/resume-en.pdf";
 import resumeJa from "@/assets/resume-rirekisho.pdf";
-=======
-import resumeEn from "@/assets/resume-en.pdf";
-import resumeJa from "@/assets/resume-rirekisho.pdf";
-import blogLogo from "@/assets/blog-logo.png";
->>>>>>> 7945abf2a8caae38cb03fdb17d8708eb7181e8b6
 
 const XIcon = ({ size = 20 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
