@@ -69,7 +69,7 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="relative order-2 lg:order-1 flex justify-center"
+            className="relative order-2 lg:order-1 flex justify-center pb-20 sm:pb-24"
           >
             <div 
               ref={photoRef}
