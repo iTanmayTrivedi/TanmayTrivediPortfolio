@@ -5,7 +5,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 // Web3Forms access key — safe to expose in the browser (it only routes to your inbox).
 const WEB3FORMS_ACCESS_KEY =
-  import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "def9b1f3-3402-4e47-a3b2-4156b9505ef1";
+  import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "1953ecaa-4bff-4034-8e0e-667c382a0d2b";
 
 interface FormData {
   name: string;
