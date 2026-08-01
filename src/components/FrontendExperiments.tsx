@@ -161,7 +161,7 @@ const FrontendExperiments = () => {
         >
           <div>
             <div className="text-xs tracking-[0.3em] uppercase text-muted-foreground">
-              {language === "ja" ? "実験とオープンソース" : "Experiments & Open Source"}
+              {language === "ja" ? "実験" : "Experiments"}
             </div>
             <h2 className="mt-4 text-3xl sm:text-4xl md:text-6xl font-bold tracking-tighter">
               {language === "ja"
@@ -169,11 +169,6 @@ const FrontendExperiments = () => {
                 : "Frontend playground."}
             </h2>
           </div>
-          <p className="max-w-md text-muted-foreground text-sm sm:text-base">
-            {language === "ja"
-              ? "本番プロダクトの外で試している小さな実験とOSS。MITライセンスで公開。"
-              : "Small experiments and OSS I tinker with outside of production work. MIT-licensed, fork freely."}
-          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
