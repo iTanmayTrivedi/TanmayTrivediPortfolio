@@ -53,18 +53,18 @@ const DevelopmentJourney = () => {
         >
           {/* Left: alternating timeline */}
           <div className="relative py-1">
-            {/* Center track */}
-            <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[3px] rounded-full bg-foreground/10" />
+            {/* Track — left rail on mobile, centered from md up */}
+            <div className="absolute left-[5px] md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-[3px] rounded-full bg-foreground/10" />
             {/* Filled progress (fills once on view) */}
             <motion.div
               initial={{ scaleY: 0 }}
               animate={inView ? { scaleY: 1 } : { scaleY: 0 }}
               transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
               style={{ transformOrigin: "top" }}
-              className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[3px] rounded-full bg-foreground"
+              className="absolute left-[5px] md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-[3px] rounded-full bg-foreground"
             />
 
-            <ul className="relative space-y-2.5 md:space-y-3">
+            <ul className="relative space-y-4 md:space-y-3">
               {projects.map((p, i) => {
                 const delay = 0.1 + (i / projects.length) * 1.1;
                 const isLeft = i % 2 === 0;
@@ -74,24 +74,34 @@ const DevelopmentJourney = () => {
                     initial={{ opacity: 0, y: 6 }}
                     animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 6 }}
                     transition={{ delay, duration: 0.4, ease: "easeOut" }}
-                    className="relative grid grid-cols-[1fr_auto_1fr] gap-4 items-start"
+                    className="relative grid grid-cols-[auto_1fr] md:grid-cols-[1fr_auto_1fr] gap-3 md:gap-4 items-start"
                   >
                     <motion.span
                       initial={{ scale: 0.4, backgroundColor: "hsl(var(--foreground) / 0.15)" }}
                       animate={inView ? { scale: 1, backgroundColor: "hsl(var(--foreground))" } : {}}
                       transition={{ delay: delay + 0.05, duration: 0.4 }}
-                      className="col-start-2 justify-self-center w-2.5 h-2.5 rounded-full ring-4 ring-background z-10 mt-1"
+                      className="col-start-1 md:col-start-2 justify-self-center w-2.5 h-2.5 rounded-full ring-4 ring-background z-10 mt-1.5 md:mt-1"
                     />
-                    <div className={isLeft ? "col-start-1 text-right pr-5" : "col-start-3 text-left pl-5"}>
-                      <p className="text-[9px] uppercase tracking-widest text-muted-foreground mb-0.5">{p.date}</p>
-                      <p className="text-xs md:text-sm font-semibold text-foreground leading-snug">
+                    <div
+                      className={`col-start-2 text-left pl-1 ${
+                        isLeft
+                          ? "md:col-start-1 md:text-right md:pr-5 md:pl-0"
+                          : "md:col-start-3 md:text-left md:pl-5"
+                      }`}
+                    >
+                      <p className="text-[10px] md:text-[9px] uppercase tracking-widest text-muted-foreground mb-0.5">{p.date}</p>
+                      <p className="text-[15px] md:text-sm font-semibold text-foreground leading-snug">
                         {language === "ja" ? p.ja : p.en}
                       </p>
-                      <div className={`mt-1 flex flex-wrap gap-1 ${isLeft ? "justify-end" : "justify-start"}`}>
+                      <div
+                        className={`mt-1.5 md:mt-1 flex flex-wrap gap-1 justify-start ${
+                          isLeft ? "md:justify-end" : "md:justify-start"
+                        }`}
+                      >
                         {p.pills.map((pill, idx) => (
                           <span
                             key={idx}
-                            className={`px-1.5 py-0 text-[9px] font-medium rounded-full border ${toneClasses[pill.tone]}`}
+                            className={`px-2 py-[1px] md:px-1.5 md:py-0 text-[10px] md:text-[9px] font-medium rounded-full border ${toneClasses[pill.tone]}`}
                           >
                             {pill.label}
                           </span>
