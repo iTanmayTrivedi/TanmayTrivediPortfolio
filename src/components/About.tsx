@@ -69,7 +69,7 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="relative order-2 lg:order-1 flex justify-center"
+            className="relative order-2 lg:order-1 flex justify-center pb-20 sm:pb-24"
           >
             <div 
               ref={photoRef}
@@ -143,7 +143,7 @@ const About = () => {
 
               {/* Floating label */}
               <motion.div
-                className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs tracking-widest uppercase text-muted-foreground whitespace-nowrap"
+                className="absolute -bottom-16 sm:-bottom-20 left-1/2 -translate-x-1/2 text-xs tracking-widest uppercase text-muted-foreground whitespace-nowrap"
                 animate={{ opacity: isHovered ? 1 : 0.6, y: isHovered ? 4 : 0 }}
                 transition={{ duration: 0.3 }}
               >

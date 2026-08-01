@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, ArrowUpRight, Send } from "lucide-react";
+import { ArrowRight, Send } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 
 type Msg = { role: "User" | "Yuki"; text: string };
@@ -42,8 +42,9 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 const reveal = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-80px" },
+  viewport: { once: true, margin: "0px 0px -10% 0px", amount: 0.1 as const },
   transition: { duration: 0.8, delay, ease: EASE },
+  style: { willChange: "transform, opacity" },
 });
 
 const YukiSection = () => {
@@ -99,9 +100,7 @@ const YukiSection = () => {
           {/* ─── Identity (pillar) ─── */}
           <motion.div
             {...reveal(0.05)}
-            whileHover={{ y: -4 }}
-            transition={{ duration: 0.5, ease: EASE }}
-            className="lg:col-span-4 lg:row-span-2 relative group overflow-hidden rounded-[2.5rem] bg-white border border-[#EBEBE8] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.06)] hover:shadow-[0_48px_96px_-24px_rgba(0,0,0,0.12)] hover:border-[#1d1d1f]/15 transition-[box-shadow,border-color] duration-700 p-10 md:p-12 flex flex-col justify-between min-h-[560px]"
+            className="lg:col-span-4 lg:row-span-2 relative group overflow-hidden rounded-[2.5rem] bg-white border border-[#EBEBE8] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.06)] hover:shadow-[0_48px_96px_-24px_rgba(0,0,0,0.12)] hover:border-[#1d1d1f]/15 transition-[box-shadow,border-color] duration-700 p-8 sm:p-10 md:p-12 flex flex-col justify-between min-h-[480px] sm:min-h-[560px] transform-gpu [backface-visibility:hidden]"
           >
             {/* Hover sheen */}
             <div
@@ -124,7 +123,7 @@ const YukiSection = () => {
 
             <div className="relative z-10">
               <h1
-                className="text-7xl md:text-8xl font-normal italic tracking-tight leading-none text-[#1d1d1f] transition-transform duration-700 group-hover:-translate-y-0.5"
+                className="text-6xl sm:text-7xl md:text-8xl font-normal italic tracking-tight leading-none text-[#1d1d1f] transition-transform duration-700 group-hover:-translate-y-0.5"
                 style={{ fontFamily: SERIF }}
               >
                 Yuki
@@ -149,13 +148,6 @@ const YukiSection = () => {
                   <ArrowRight className="w-3.5 h-3.5 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:translate-x-1" />
                 </span>
               </a>
-              <a
-                href="#yuki"
-                className="group/btn w-full inline-flex items-center justify-between gap-2 py-4 px-6 rounded-2xl border border-[#D2D2D7]/60 text-[#1d1d1f] text-[12px] font-medium tracking-[0.06em] hover:bg-white hover:border-[#1d1d1f]/30 hover:-translate-y-0.5 transition-all duration-500"
-              >
-                Get to know more about Yuki
-                <ArrowUpRight className="w-4 h-4 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 group-hover/btn:rotate-[20deg]" />
-              </a>
             </div>
           </motion.div>
 
@@ -163,10 +155,7 @@ const YukiSection = () => {
           <motion.div
             id="yuki-chat"
             {...reveal(0.15)}
-            whileHover={{ y: -2 }}
-            transition={{ duration: 0.5, ease: EASE }}
-            className="lg:col-span-8 rounded-[2.5rem] bg-white/70 border border-white shadow-[0_48px_96px_-32px_rgba(0,0,0,0.06)] hover:shadow-[0_64px_120px_-32px_rgba(0,0,0,0.12)] transition-shadow duration-700 p-8 md:p-10 flex flex-col min-h-[440px]"
-            style={{ backdropFilter: "blur(20px)" }}
+            className="lg:col-span-8 rounded-[2.5rem] bg-white/90 border border-white shadow-[0_48px_96px_-32px_rgba(0,0,0,0.06)] hover:shadow-[0_64px_120px_-32px_rgba(0,0,0,0.12)] transition-shadow duration-700 p-6 sm:p-8 md:p-10 flex flex-col min-h-[400px] sm:min-h-[440px] transform-gpu [backface-visibility:hidden]"
           >
             {/* Header */}
             <div className="flex items-center justify-between mb-8 md:mb-10">
@@ -277,9 +266,7 @@ const YukiSection = () => {
           {/* ─── Philosophy (dark) ─── */}
           <motion.div
             {...reveal(0.2)}
-            whileHover={{ y: -4 }}
-            transition={{ duration: 0.5, ease: EASE }}
-            className="lg:col-span-5 rounded-[2.5rem] bg-[#1d1d1f] p-10 md:p-12 flex flex-col justify-between text-[#F5F5F7] min-h-[320px] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.35)] hover:shadow-[0_60px_120px_-30px_rgba(0,0,0,0.55)] transition-all duration-700 hover:bg-black group relative overflow-hidden"
+            className="lg:col-span-5 rounded-[2.5rem] bg-[#1d1d1f] p-8 sm:p-10 md:p-12 flex flex-col justify-between text-[#F5F5F7] min-h-[260px] sm:min-h-[320px] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.35)] hover:shadow-[0_60px_120px_-30px_rgba(0,0,0,0.55)] transition-all duration-700 hover:bg-black group relative overflow-hidden transform-gpu [backface-visibility:hidden]"
           >
             <div
               aria-hidden
@@ -291,7 +278,7 @@ const YukiSection = () => {
             />
             <div>
               <p
-                className="text-2xl md:text-[1.7rem] leading-snug font-light tracking-tight"
+                className="text-xl sm:text-2xl md:text-[1.7rem] leading-snug font-light tracking-tight"
                 style={{ fontFamily: SERIF }}
               >
                 Most assistants optimize for{" "}
@@ -309,9 +296,7 @@ const YukiSection = () => {
           {/* ─── Kanji Oracle (interactive) ─── */}
           <motion.div
             {...reveal(0.28)}
-            whileHover={{ y: -4 }}
-            transition={{ duration: 0.5, ease: EASE }}
-            className="lg:col-span-3 rounded-[2.5rem] bg-white border border-[#EBEBE8] p-7 md:p-8 flex flex-col min-h-[320px] shadow-[0_24px_48px_-16px_rgba(0,0,0,0.06)] hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.12)] transition-shadow duration-700 group"
+            className="lg:col-span-3 rounded-[2.5rem] bg-white border border-[#EBEBE8] p-6 sm:p-7 md:p-8 flex flex-col min-h-[300px] sm:min-h-[320px] shadow-[0_24px_48px_-16px_rgba(0,0,0,0.06)] hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.12)] transition-shadow duration-700 group transform-gpu [backface-visibility:hidden]"
           >
             <div className="flex items-center justify-between mb-4">
               <p className="text-[9px] font-bold uppercase tracking-[0.4em] text-[#86868B]">
@@ -336,7 +321,7 @@ const YukiSection = () => {
                   className="flex flex-col items-center"
                 >
                   <span
-                    className="text-[7rem] leading-none text-[#1d1d1f] transition-transform duration-700 group-hover:scale-110"
+                    className="text-[5.5rem] sm:text-[7rem] leading-none text-[#1d1d1f] transition-transform duration-700 group-hover:scale-110"
                     style={{ fontFamily: MINCHO, fontWeight: 200 }}
                   >
                     {kanji.ji}
