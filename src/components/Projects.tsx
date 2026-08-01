@@ -116,23 +116,23 @@ const ProjectCard = ({
         />
         
         <motion.div
-          className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent opacity-25 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-500"
         />
         
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileHover={{ opacity: 1, x: 0 }}
-          className="absolute top-6 left-6 text-background text-8xl font-bold opacity-0 group-hover:opacity-30 transition-opacity duration-500"
+          className="absolute top-6 left-6 text-background text-8xl font-bold opacity-0 sm:group-hover:opacity-30 transition-opacity duration-500"
         >
           0{index + 1}
         </motion.div>
 
         <motion.div
-          className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-300"
+          className="absolute bottom-5 right-5 sm:bottom-6 sm:right-6 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300"
           initial={{ y: 20 }}
           whileHover={{ scale: 1.1 }}
         >
-          <div className="w-14 h-14 rounded-full bg-background text-foreground flex items-center justify-center">
+          <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-background text-foreground flex items-center justify-center">
             <svg width="16" height="16" viewBox="0 0 12 12" fill="none">
               <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="1.5" />
             </svg>
