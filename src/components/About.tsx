@@ -143,7 +143,7 @@ const About = () => {
 
               {/* Floating label */}
               <motion.div
-                className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs tracking-widest uppercase text-muted-foreground whitespace-nowrap"
+                className="absolute -bottom-16 sm:-bottom-20 left-1/2 -translate-x-1/2 text-xs tracking-widest uppercase text-muted-foreground whitespace-nowrap"
                 animate={{ opacity: isHovered ? 1 : 0.6, y: isHovered ? 4 : 0 }}
                 transition={{ duration: 0.3 }}
               >
