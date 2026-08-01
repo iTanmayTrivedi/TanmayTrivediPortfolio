@@ -116,13 +116,13 @@ const ProjectCard = ({
         />
         
         <motion.div
-          className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent opacity-60 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-500"
+          className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent opacity-25 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-500"
         />
         
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileHover={{ opacity: 1, x: 0 }}
-          className="absolute top-5 left-5 sm:top-6 sm:left-6 text-background text-6xl sm:text-8xl font-bold opacity-30 sm:opacity-0 sm:group-hover:opacity-30 transition-opacity duration-500"
+          className="absolute top-6 left-6 text-background text-8xl font-bold opacity-0 sm:group-hover:opacity-30 transition-opacity duration-500"
         >
           0{index + 1}
         </motion.div>
