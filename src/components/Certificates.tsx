@@ -154,9 +154,9 @@ const certificates: Cert[] = [
     learnedJa:
       "脅威モデル、代表的な攻撃手法、多層防御、ユーザーデータを扱う開発者としてのセキュリティ責任を学習。",
     applied:
-      "Hardened auth flows, RLS policies, and secret handling in Lovable Cloud projects — security as a default, not a feature.",
+      "Hardened auth flows, RLS policies, and secret handling in cloud projects — security as a default, not a feature.",
     appliedJa:
-      "Lovable Cloud プロジェクトの認証・RLS・シークレット管理を強化。セキュリティを既定値として実装。",
+      "クラウドプロジェクトの認証・RLS・シークレット管理を強化。セキュリティを既定値として実装。",
   },
   {
     id: "genai",
@@ -244,7 +244,7 @@ const certificates: Cert[] = [
     learnedJa:
       "オブジェクトストレージの基礎 — バケット、バージョニング、ライフサイクル、IAM、公開/非公開アクセスの安全設計。",
     applied:
-      "Used S3 patterns for media uploads, signed URLs, and cost-aware storage tiers in production Lovable Cloud projects.",
+      "Used S3 patterns for media uploads, signed URLs, and cost-aware storage tiers in production cloud projects.",
     appliedJa:
       "メディアアップロード、署名付き URL、コスト最適化されたストレージ階層を実プロジェクトで活用。",
   },
