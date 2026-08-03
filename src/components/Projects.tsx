@@ -41,7 +41,7 @@ const projects = [
     description: "Bilingual AI-powered marketplace clone with roles, checkout, and BI dashboards.",
     descriptionJa: "ロール・決済・BIを備えたAI搭載バイリンガルマーケットプレイス。",
     image: project3,
-    tags: ["React", "Supabase", "Lovable AI"],
+    tags: ["React", "Supabase", "Gemini AI"],
   },
   {
     id: 4,
@@ -72,7 +72,7 @@ const projects = [
     description: "The operating system for moving, studying & working in Japan — visas, resumes, jobs.",
     descriptionJa: "日本での移住・留学・就職のためのOS。ビザ、履歴書、求人。",
     image: project6,
-    tags: ["React", "Lovable Cloud", "AI Gateway"],
+    tags: ["React", "Supabase", "AI Gateway"],
     hidden: true,
   },
 ];
