@@ -17,7 +17,7 @@ const projects = [
     id: 1,
     title: "TeamHub",
     titleJa: "チームハブ",
-    slug: "dataflow",
+    slug: "teamhub",
     description: "Bilingual team & task management platform with realtime collaboration and AI insights.",
     descriptionJa: "リアルタイム協働とAIインサイトを備えたバイリンガル対応のチーム管理プラットフォーム。",
     image: project1,
@@ -27,7 +27,7 @@ const projects = [
     id: 2,
     title: "BookFlow",
     titleJa: "ブックフロー",
-    slug: "shopify-plus",
+    slug: "bookflow",
     description: "Intelligent appointment & reservation platform with AI scheduling and dual demo mode.",
     descriptionJa: "AIスケジューリングとデモモードを備えた予約・受付プラットフォーム。",
     image: project2,
@@ -37,7 +37,7 @@ const projects = [
     id: 3,
     title: "Rakuten Reimagined",
     titleJa: "楽天リイマジンド",
-    slug: "fintrack",
+    slug: "rakuten",
     description: "Bilingual AI-powered marketplace clone with roles, checkout, and BI dashboards.",
     descriptionJa: "ロール・決済・BIを備えたAI搭載バイリンガルマーケットプレイス。",
     image: project3,
@@ -47,7 +47,7 @@ const projects = [
     id: 4,
     title: "Kaizen",
     titleJa: "改善",
-    slug: "estate-pro",
+    slug: "kaizen",
     description: "AI-powered Japanese business operations suite — Keigo, translation, minutes, sentiment.",
     descriptionJa: "敬語、翻訳、議事録、感情分析を備えたAI搭載の日本ビジネス運営スイート。",
     image: project4,
@@ -57,7 +57,7 @@ const projects = [
     id: 5,
     title: "SysMonitor",
     titleJa: "システムモニター",
-    slug: "taskboard",
+    slug: "sysmonitor",
     description: "Real-time observability & alerting platform with AI-assisted root-cause analysis.",
     descriptionJa: "AIによる根本原因分析を備えたリアルタイム監視プラットフォーム。",
     image: project5,
@@ -68,7 +68,7 @@ const projects = [
     id: 6,
     title: "JapanPath",
     titleJa: "ジャパンパス",
-    slug: "mediconnect",
+    slug: "lynt",
     description: "The operating system for moving, studying & working in Japan — visas, resumes, jobs.",
     descriptionJa: "日本での移住・留学・就職のためのOS。ビザ、履歴書、求人。",
     image: project6,
@@ -391,7 +391,7 @@ const Projects = () => {
     setIsTransitioning(true);
     // Bars sweep in (~0.55s + 0.07*2 stagger ≈ 0.7s), then navigate
     window.setTimeout(() => {
-      navigate(`/project/${slug}`);
+      navigate(`/projects/${slug}`);
     }, 750);
   };
 

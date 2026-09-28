@@ -730,12 +730,12 @@ const ResumeMobile = () => (
 type DeviceType = "macbook" | "ipad" | "iphone";
 
 const screenMap: Record<string, Record<DeviceType, React.FC>> = {
-  "dataflow": { macbook: DashboardDesktop, ipad: DashboardTablet, iphone: DashboardMobile },
-  "shopify-plus": { macbook: BookingDesktop, ipad: BookingTablet, iphone: BookingMobile },
-  "fintrack": { macbook: EcommerceDesktop, ipad: EcommerceTablet, iphone: EcommerceMobile },
-  "estate-pro": { macbook: SaaSDesktop, ipad: SaaSTablet, iphone: SaaSMobile },
-  "taskboard": { macbook: MonitoringDesktop, ipad: MonitoringTablet, iphone: MonitoringMobile },
-  "mediconnect": { macbook: ResumeDesktop, ipad: ResumeTablet, iphone: ResumeMobile },
+  "teamhub": { macbook: DashboardDesktop, ipad: DashboardTablet, iphone: DashboardMobile },
+  "bookflow": { macbook: BookingDesktop, ipad: BookingTablet, iphone: BookingMobile },
+  "rakuten": { macbook: EcommerceDesktop, ipad: EcommerceTablet, iphone: EcommerceMobile },
+  "kaizen": { macbook: SaaSDesktop, ipad: SaaSTablet, iphone: SaaSMobile },
+  "sysmonitor": { macbook: MonitoringDesktop, ipad: MonitoringTablet, iphone: MonitoringMobile },
+  "lynt": { macbook: ResumeDesktop, ipad: ResumeTablet, iphone: ResumeMobile },
 };
 
 export const getSimulatedScreen = (projectSlug: string, device: DeviceType): React.FC | null => {

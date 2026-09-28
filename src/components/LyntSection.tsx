@@ -545,7 +545,7 @@ const LyntSection = () => {
                 </div>
               </div>
               <motion.button
-                onClick={() => navigate("/project/mediconnect")}
+                onClick={() => navigate("/projects/lynt")}
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.98 }}
                 className="group relative inline-flex items-center gap-4 bg-background text-foreground rounded-full pl-7 pr-3 py-3 text-sm sm:text-base font-medium tracking-tight shadow-none hover:shadow-[0_20px_60px_-20px_rgba(255,255,255,0.35)] transition-shadow duration-500"
