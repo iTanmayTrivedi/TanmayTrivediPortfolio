@@ -40,7 +40,7 @@ export interface ProjectData {
 
 export const projectsData: Record<string, ProjectData> = {
   // 1. TeamHub — Internal Company Management System
-  "dataflow": {
+  "teamhub": {
     id: 1,
     title: "TeamHub",
     subtitle: "Bilingual Team & Task Management Platform",
@@ -215,7 +215,7 @@ Every destructive action (delete employee, remove task) requires confirmation. F
   },
 
   // 2. BookFlow — Appointment & Reservation
-  "shopify-plus": {
+  "bookflow": {
     id: 2,
     title: "BookFlow",
     subtitle: "Intelligent Appointment & Reservation Platform",
@@ -397,7 +397,7 @@ Every destructive action (cancel, delete, no-show) is confirmed. Form errors app
   },
 
   // 3. Rakuten Reimagined — E-commerce Admin Dashboard
-  "fintrack": {
+  "rakuten": {
     id: 3,
     title: "Rakuten Reimagined",
     subtitle: "A Bilingual AI-Powered Marketplace Clone",
@@ -567,7 +567,7 @@ Every destructive action is confirmed via dialogs, forms validate inline, and th
   },
 
   // 4. Kaizen — Multilingual SaaS Platform
-  "estate-pro": {
+  "kaizen": {
     id: 4,
     title: "Kaizen",
     subtitle: "AI-Powered Japanese Business Operations Suite",
@@ -728,7 +728,7 @@ Built to replace a fragmented stack of translation apps, Google Docs templates, 
   },
 
   // 5. SysMonitor — System Monitoring & Log Dashboard
-  "taskboard": {
+  "sysmonitor": {
     id: 5,
     title: "SysMonitor",
     subtitle: "Real-time Observability & AI Diagnostics",
@@ -891,7 +891,7 @@ The auth page intentionally breaks the pattern with a refined editorial split-sc
   },
 
   // 6. JapanPath (also featured as LYNT) — Japan Career Path Platform
-  "mediconnect": {
+  "lynt": {
     id: 6,
     title: "Lynt",
     subtitle: "Bilingual Relocation & Career OS for International Talent",

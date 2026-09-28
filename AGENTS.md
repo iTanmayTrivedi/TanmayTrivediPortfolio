@@ -1,0 +1,1 @@
+Use `/projects/:slug` for portfolio case studies, with slugs `teamhub`, `bookflow`, `rakuten`, `kaizen`, `sysmonitor`, and `lynt`; keep legacy `/project/:slug` addresses redirecting to their canonical pages so existing links remain useful.
