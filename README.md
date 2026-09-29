@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="Banner.svg" alt="田丸 環 · Tanmay Trivedi — Product Engineer"/>
+<img src="assets/banner.svg" alt="田丸 環 · Tanmay Trivedi — Product Engineer"/>
 
 <a href="https://tanmaytrivedi.dev">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=900&color=FF8FB3&center=true&vCenter=true&width=720&lines=%E6%82%A0+Yuki+AI+%E2%80%94+a+bilingual+Japan-specialist+chatbot+%F0%9F%8C%99;Lynt+%E2%80%94+live+Japan+career+%26+visa+intelligence+%F0%9F%8C%B8;Design+%E2%86%92+Postgres+%E2%86%92+ship+%E2%86%92+measure+%E2%86%92+%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%8C%96;%E7%9B%AE%E6%A8%99%EF%BC%9A2029%E5%B9%B4%E3%80%81%E6%97%A5%E6%9C%AC%E3%81%B8+%E2%9B%A9%EF%B8%8F" alt="Typing SVG"/>
@@ -12,9 +12,11 @@
 [![Email](https://img.shields.io/badge/✉_Email-Say_hello-ff8fb3?style=for-the-badge&labelColor=1a1a2e)](mailto:itanmaytrivedi@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/in_LinkedIn-Connect-e94560?style=for-the-badge&labelColor=1a1a2e)](https://www.linkedin.com/in/itanmaytrivedi)
 
-<sub>「一期一会」 — every encounter, a once-in-a-lifetime meeting</sub>
+<img src="assets/divider.svg" alt=""/>
 
-<img src="Divider.svg" alt=""/>
+<img src="assets/dialogue.svg" alt="はじめまして！ I'm Tanmay — 田丸 環. I build Japan-focused products: Lynt and 悠 Yuki AI. Next chapters: JLPT N1 in July 2027, then Japan in 2029."/>
+
+<img src="assets/divider.svg" alt=""/>
 
 </div>
 
@@ -33,7 +35,11 @@
 
 </div>
 
-## ⚔️ &nbsp;クエスト · Quest Log
+## ✈️ &nbsp;旅路 · The Journey
+
+<div align="center">
+<img src="assets/journey.svg" alt="Flight path: Kanpur 2026 → JLPT N1 July 2027 → B.Tech graduation June 2029 → Tokyo / Osaka 2029"/>
+</div>
 
 <div align="center">
 
@@ -46,54 +52,30 @@
 
 </div>
 
-<div align="center"><img src="Divider.svg" alt=""/></div>
+<div align="center"><img src="assets/divider.svg" alt=""/></div>
 
 ## 🌸 &nbsp;制作物 · Selected Work
 
-<table width="100%">
-<tr>
-<td width="50%" valign="top">
+<div align="center">
+<a href="https://tanmaytrivedi.dev">
+  <img src="assets/projects.svg" alt="Lynt, Yuki AI, TeamHub, BookFlow — full case studies at tanmaytrivedi.dev"/>
+</a>
+<br/>
+<sub>Full case studies → <a href="https://tanmaytrivedi.dev"><b>tanmaytrivedi.dev</b></a></sub>
+</div>
 
-### 🌸 Lynt
-Live SaaS for Japan-bound careers: pathway matching, readiness scoring, a job portal, visa intelligence, and a bilingual AI companion.
+<div align="center"><img src="assets/divider.svg" alt=""/></div>
 
-`React` `Vite` `TanStack Router` `Supabase` `Redis`
+## 🪐 &nbsp;技術の軌道 · Skill Orbit
 
-</td>
-<td width="50%" valign="top">
+<div align="center">
+<img src="assets/orbit.svg" alt="Skill orbit: React, Next.js, Vite, Tailwind, TypeScript, Supabase, PostgreSQL, Redis, Node.js, Go, Groq, Llama 3.3, Docker, AWS, Vercel, GitHub Actions"/>
+</div>
 
-### 🌙 悠 Yuki AI
-A Japan-specialist chatbot that is honorific-aware and real-time, built on Groq with Supabase Edge Functions.
+<details>
+<summary><b>📋 &nbsp;Full stack, as a list</b></summary>
 
-`Next.js` `Edge Functions` `Groq · Llama 3.3 70B`
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 👥 TeamHub
-Realtime team and task platform with AI insights and live presence sync.
-
-`Next.js` `Supabase Realtime`
-
-</td>
-<td width="50%" valign="top">
-
-### 📅 BookFlow
-Bilingual appointment and reservation platform with AI scheduling and a dual demo mode.
-
-`React` `Supabase` `Edge Functions`
-
-</td>
-</tr>
-</table>
-
-<div align="center"><sub>Full case studies → <a href="https://tanmaytrivedi.dev"><b>tanmaytrivedi.dev</b></a></sub></div>
-
-<div align="center"><img src="Divider.svg" alt=""/></div>
-
-## 🎴 &nbsp;スキルツリー · Skill Tree
+<br/>
 
 | | |
 | :-- | :-- |
@@ -102,17 +84,26 @@ Bilingual appointment and reservation platform with AI scheduling and a dual dem
 | 🧠 **AI** | Groq · Llama 3.3 70B · bilingual, honorific-aware prompt design |
 | 🚀 **Ship** | Docker · AWS · Vercel · GitHub Actions |
 
-<div align="center">
-<img src="https://skillicons.dev/icons?i=react,vite,ts,nextjs,tailwind,nodejs,postgres,supabase,go,docker,aws,redis,vercel&theme=dark"/>
-</div>
+</details>
 
-<div align="center"><img src="Divider.svg" alt=""/></div>
+<div align="center"><img src="assets/divider.svg" alt=""/></div>
 
 ## 🍡 &nbsp;オフ · Off-Duty
 
 Slice-of-life and romance anime are my comfort genre, with *Jujutsu Kaisen*, *Bleach* and *Demon Slayer* for when I want something louder. I put Japanese culture into my products because I care about it, and that shows up in the details.
 
-<div align="center"><img src="Divider.svg" alt=""/></div>
+<details>
+<summary><b>🌀 &nbsp;必殺技 · Special Move (click)</b></summary>
+
+<br/>
+
+> **全部実装 — Full-Stack Ship**
+> One engineer, one feature, end to end: **design → Postgres → ship → measure → 日本語化**.
+> Cooldown: none. Cost: a lot of tea.
+
+</details>
+
+<div align="center"><img src="assets/divider.svg" alt=""/></div>
 
 ## 💌 &nbsp;一緒に働きませんか · Let's Work Together
 
@@ -159,12 +150,8 @@ Built with React, Vite, TypeScript, Tailwind, shadcn/ui and Framer Motion. Deplo
 </details>
 
 <div align="center">
-
 <br/>
-
-<samp>「改善は毎日の小さな一歩から。」</samp><br/>
-<sub><i>Improvement is built one quiet commit at a time.</i></sub>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:ff8fb3,50:e94560,100:1a1a2e&height=110&section=footer"/>
-
+<img src="assets/footer.svg" alt="また会いましょう · See you in Japan"/>
+<br/>
+<sub><i>「改善は毎日の小さな一歩から。」 Improvement is built one quiet commit at a time.</i></sub>
 </div>
