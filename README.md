@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="田丸 環 · Tanmay Trivedi — Product Engineer"/>
+<img src="Banner.svg" alt="田丸 環 · Tanmay Trivedi — Product Engineer"/>
 
 <a href="https://tanmaytrivedi.dev">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=900&color=FF8FB3&center=true&vCenter=true&width=720&lines=%E6%82%A0+Yuki+AI+%E2%80%94+a+bilingual+Japan-specialist+chatbot+%F0%9F%8C%99;Lynt+%E2%80%94+live+Japan+career+%26+visa+intelligence+%F0%9F%8C%B8;Design+%E2%86%92+Postgres+%E2%86%92+ship+%E2%86%92+measure+%E2%86%92+%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%8C%96;%E7%9B%AE%E6%A8%99%EF%BC%9A2029%E5%B9%B4%E3%80%81%E6%97%A5%E6%9C%AC%E3%81%B8+%E2%9B%A9%EF%B8%8F" alt="Typing SVG"/>
@@ -15,7 +15,7 @@
 
 <sub>「一期一会」 — every encounter, a once-in-a-lifetime meeting</sub>
 
-<img src="assets/divider.svg" alt=""/>
+<img src="Divider.svg" alt=""/>
 
 </div>
 
@@ -23,7 +23,7 @@
 
 <div align="center">
 
-| | |
+| 項目 | 詳細 |
 | :--: | :-- |
 | **名前** Name | Tanmay Trivedi · 田丸 環 |
 | **職業** Class | Product Engineer — frontend-leaning full-stack |
@@ -47,7 +47,7 @@
 
 </div>
 
-<div align="center"><img src="assets/divider.svg" alt=""/></div>
+<div align="center"><img src="Divider.svg" alt=""/></div>
 
 ## 🌸 &nbsp;制作物 · Selected Work
 
@@ -92,7 +92,7 @@ Bilingual appointment and reservation platform with AI scheduling and a dual dem
 
 <div align="center"><sub>Full case studies → <a href="https://tanmaytrivedi.dev"><b>tanmaytrivedi.dev</b></a></sub></div>
 
-<div align="center"><img src="assets/divider.svg" alt=""/></div>
+<div align="center"><img src="Divider.svg" alt=""/></div>
 
 ## 🎴 &nbsp;スキルツリー · Skill Tree
 
@@ -107,30 +107,13 @@ Bilingual appointment and reservation platform with AI scheduling and a dual dem
 <img src="https://skillicons.dev/icons?i=react,vite,ts,nextjs,tailwind,nodejs,postgres,supabase,go,docker,aws,redis,vercel&theme=dark"/>
 </div>
 
-<div align="center"><img src="assets/divider.svg" alt=""/></div>
-
-## 📈 &nbsp;シグナル · Signal
-
-<div align="center">
-
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=iTanmayTrivedi&show_icons=true&hide_border=true&hide_title=true&include_all_commits=true&count_private=true&icon_color=ff8fb3&text_color=f5e6ee&title_color=e94560&bg_color=1a1a2e"/>
-<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=iTanmayTrivedi&layout=compact&hide_border=true&langs_count=8&text_color=f5e6ee&title_color=e94560&bg_color=1a1a2e"/>
-
-<br/><br/>
-
-<img src="https://streak-stats.demolab.com?user=iTanmayTrivedi&hide_border=true&background=1a1a2e&stroke=1a1a2e&ring=e94560&fire=ff8fb3&currStreakLabel=f5e6ee&currStreakNum=ff8fb3&sideNums=ff8fb3&sideLabels=f5e6ee&dates=b08aa0" width="72%"/>
-
-<br/><br/>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=iTanmayTrivedi&bg_color=1a1a2e&color=ff8fb3&line=e94560&point=ffffff&area=true&area_color=e94560&hide_border=true" width="97%"/>
-
-</div>
+<div align="center"><img src="Divider.svg" alt=""/></div>
 
 ## 🍡 &nbsp;オフ · Off-Duty
 
 Slice-of-life and romance anime are my comfort genre, with *Jujutsu Kaisen*, *Bleach* and *Demon Slayer* for when I want something louder. I put Japanese culture into my products because I care about it, and that shows up in the details.
 
-<div align="center"><img src="assets/divider.svg" alt=""/></div>
+<div align="center"><img src="Divider.svg" alt=""/></div>
 
 ## 💌 &nbsp;一緒に働きませんか · Let's Work Together
 
