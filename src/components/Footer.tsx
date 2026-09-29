@@ -2,7 +2,6 @@ import { motion, useInView } from "framer-motion";
 import { ArrowUp, ArrowUpRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useRef } from "react";
-import faviconWhite from "@/assets/favicon-white.png";
 
 const AnimatedName = () => {
   const ref = useRef<HTMLDivElement>(null);
