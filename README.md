@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="田丸 環 · Tanmay Trivedi — Product Engineer"/>
+<img src="Banner.svg" alt="田丸 環 · Tanmay Trivedi — Product Engineer"/>
 
 <a href="https://tanmaytrivedi.dev">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=900&color=FF8FB3&center=true&vCenter=true&width=720&lines=%E6%82%A0+Yuki+AI+%E2%80%94+a+bilingual+Japan-specialist+chatbot+%F0%9F%8C%99;Lynt+%E2%80%94+live+Japan+career+%26+visa+intelligence+%F0%9F%8C%B8;Design+%E2%86%92+Postgres+%E2%86%92+ship+%E2%86%92+measure+%E2%86%92+%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%8C%96;%E7%9B%AE%E6%A8%99%EF%BC%9A2029%E5%B9%B4%E3%80%81%E6%97%A5%E6%9C%AC%E3%81%B8+%E2%9B%A9%EF%B8%8F" alt="Typing SVG"/>
@@ -12,11 +12,11 @@
 [![Email](https://img.shields.io/badge/✉_Email-Say_hello-ff8fb3?style=for-the-badge&labelColor=1a1a2e)](mailto:itanmaytrivedi@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/in_LinkedIn-Connect-e94560?style=for-the-badge&labelColor=1a1a2e)](https://www.linkedin.com/in/itanmaytrivedi)
 
-<img src="assets/divider.svg" alt=""/>
+<img src="Divider.svg" alt=""/>
 
-<img src="assets/dialogue.svg" alt="はじめまして！ I'm Tanmay — 田丸 環. I build Japan-focused products: Lynt and 悠 Yuki AI. Next chapters: JLPT N1 in July 2027, then Japan in 2029."/>
+<img src="Dialogue.svg" alt="はじめまして！ I'm Tanmay — 田丸 環. I build Japan-focused products: Lynt and 悠 Yuki AI. Next chapters: JLPT N1 in July 2027, then Japan in 2029."/>
 
-<img src="assets/divider.svg" alt=""/>
+<img src="Divider.svg" alt=""/>
 
 </div>
 
@@ -38,7 +38,7 @@
 ## ✈️ &nbsp;旅路 · The Journey
 
 <div align="center">
-<img src="assets/journey.svg" alt="Flight path: Kanpur 2026 → JLPT N1 July 2027 → B.Tech graduation June 2029 → Tokyo / Osaka 2029"/>
+<img src="journey.svg" alt="Flight path: Kanpur 2026 → JLPT N1 July 2027 → B.Tech graduation June 2029 → Tokyo / Osaka 2029"/>
 </div>
 
 <div align="center">
@@ -52,24 +52,24 @@
 
 </div>
 
-<div align="center"><img src="assets/divider.svg" alt=""/></div>
+<div align="center"><img src="Divider.svg" alt=""/></div>
 
 ## 🌸 &nbsp;制作物 · Selected Work
 
 <div align="center">
 <a href="https://tanmaytrivedi.dev">
-  <img src="assets/projects.svg" alt="Lynt, Yuki AI, TeamHub, BookFlow — full case studies at tanmaytrivedi.dev"/>
+  <img src="projects.svg" alt="Lynt, Yuki AI, TeamHub, BookFlow — full case studies at tanmaytrivedi.dev"/>
 </a>
 <br/>
 <sub>Full case studies → <a href="https://tanmaytrivedi.dev"><b>tanmaytrivedi.dev</b></a></sub>
 </div>
 
-<div align="center"><img src="assets/divider.svg" alt=""/></div>
+<div align="center"><img src="Divider.svg" alt=""/></div>
 
 ## 🪐 &nbsp;技術の軌道 · Skill Orbit
 
 <div align="center">
-<img src="assets/orbit.svg" alt="Skill orbit: React, Next.js, Vite, Tailwind, TypeScript, Supabase, PostgreSQL, Redis, Node.js, Go, Groq, Llama 3.3, Docker, AWS, Vercel, GitHub Actions"/>
+<img src="orbit.svg" alt="Skill orbit: React, Next.js, Vite, Tailwind, TypeScript, Supabase, PostgreSQL, Redis, Node.js, Go, Groq, Llama 3.3, Docker, AWS, Vercel, GitHub Actions"/>
 </div>
 
 <details>
@@ -86,7 +86,7 @@
 
 </details>
 
-<div align="center"><img src="assets/divider.svg" alt=""/></div>
+<div align="center"><img src="Divider.svg" alt=""/></div>
 
 ## 🍡 &nbsp;オフ · Off-Duty
 
@@ -103,7 +103,7 @@ Slice-of-life and romance anime are my comfort genre, with *Jujutsu Kaisen*, *Bl
 
 </details>
 
-<div align="center"><img src="assets/divider.svg" alt=""/></div>
+<div align="center"><img src="Divider.svg" alt=""/></div>
 
 ## 💌 &nbsp;一緒に働きませんか · Let's Work Together
 
@@ -151,7 +151,7 @@ Built with React, Vite, TypeScript, Tailwind, shadcn/ui and Framer Motion. Deplo
 
 <div align="center">
 <br/>
-<img src="assets/footer.svg" alt="また会いましょう · See you in Japan"/>
+<img src="footer.svg" alt="また会いましょう · See you in Japan"/>
 <br/>
 <sub><i>「改善は毎日の小さな一歩から。」 Improvement is built one quiet commit at a time.</i></sub>
 </div>
