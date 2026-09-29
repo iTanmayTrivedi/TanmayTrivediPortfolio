@@ -138,7 +138,7 @@ const Footer = () => {
             >
               <a href="#top" className="block" aria-label="Tanmay Trivedi — home">
                 <img
-                  src={faviconWhite}
+                  src="/favicon-white.png"
                   alt="Tanmay Trivedi developer favicon"
                   className="w-12 h-12 sm:w-14 sm:h-14"
                   loading="lazy"
