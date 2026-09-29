@@ -11,7 +11,6 @@
 [![Portfolio](https://img.shields.io/badge/⛩_Portfolio-tanmaytrivedi.dev-e94560?style=for-the-badge&labelColor=1a1a2e)](https://tanmaytrivedi.dev)
 [![Email](https://img.shields.io/badge/✉_Email-Say_hello-ff8fb3?style=for-the-badge&labelColor=1a1a2e)](mailto:itanmaytrivedi@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/in_LinkedIn-Connect-e94560?style=for-the-badge&labelColor=1a1a2e)](https://www.linkedin.com/in/itanmaytrivedi)
-[![X](https://img.shields.io/badge/✕_X-@iTanmayTrivedi-ff8fb3?style=for-the-badge&labelColor=1a1a2e)](https://x.com/iTanmayTrivedi)
 
 <sub>「一期一会」 — every encounter, a once-in-a-lifetime meeting</sub>
 
