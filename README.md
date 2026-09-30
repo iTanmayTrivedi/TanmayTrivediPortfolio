@@ -45,8 +45,8 @@
 
 | | Quest | Status |
 | :--: | :-- | :--: |
-| 🌸 | **Lynt** — Japan career & visa intelligence platform | `LIVE` |
-| 🌙 | **悠 Yuki AI** — bilingual, honorific-aware Japan assistant | `BUILT` |
+| 🌸 | **Lynt** — Japan career & visa intelligence platform | [`LIVE ↗`](https://lynt.tanmaytrivedi.dev) |
+| 🌙 | **悠 Yuki AI** — bilingual, honorific-aware Japan assistant | [`LIVE ↗`](https://yuki.tanmaytrivedi.dev) |
 | 📖 | **JLPT N1** | `IN PROGRESS · JUL 2027` |
 | ⛩️ | **Join a product-led team in Tokyo / Osaka** | `TARGET · 2029` |
 
