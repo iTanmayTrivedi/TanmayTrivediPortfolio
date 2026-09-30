@@ -1,1 +1,2 @@
 Use `/projects/:slug` for portfolio case studies, with slugs `teamhub`, `bookflow`, `rakuten`, `kaizen`, `sysmonitor`, and `lynt`; keep legacy `/project/:slug` addresses redirecting to their canonical pages so existing links remain useful.
+Keep the local development component inspector enabled through `vite.config.ts` and `src/dev/componentInspector.js`; its source mapping and preview overrides support visual editing without affecting production.
