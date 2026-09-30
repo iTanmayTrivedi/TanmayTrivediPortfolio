@@ -173,8 +173,8 @@ Lighthouse   92 / 98 / 100   ·   1.5s TTI
 <table align="center" width="92%">
 <tr>
 <td valign="top" width="25%"><sub>**Frontend**</sub><br/><sub>React 18 · TypeScript · Vite · Tailwind · Framer Motion · shadcn/ui · Three.js / R3F</sub></td>
-<td valign="top" width="25%"><sub>**Backend**</sub><br/><sub>Supabase (Postgres · RLS) · Lovable Cloud · Edge Functions (Deno) · Node</sub></td>
-<td valign="top" width="25%"><sub>**AI**</sub><br/><sub>Gemini 2.5 Flash · Lovable AI Gateway · Strict-JSON pipelines · Prompt-as-spec</sub></td>
+<td valign="top" width="25%"><sub>**Backend**</sub><br/><sub>Supabase (Postgres · RLS) · Cloud infrastructure · Edge Functions (Deno) · Node</sub></td>
+<td valign="top" width="25%"><sub>**AI**</sub><br/><sub>Gemini 2.5 Flash · AI gateway · Strict-JSON pipelines · Prompt-as-spec</sub></td>
 <td valign="top" width="25%"><sub>**Craft**</sub><br/><sub>i18n (EN ↔ JP) · WCAG AA · Design tokens · Motion choreography · Perf budgets</sub></td>
 </tr>
 </table>
