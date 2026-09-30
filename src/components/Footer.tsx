@@ -146,7 +146,7 @@ const Footer = () => {
               </a>
               <p className="text-sm leading-relaxed text-background/60 max-w-xs">
                 Full-Stack Developer
-                <br />& AI / ML
+                <br />
               </p>
             </motion.div>
 
