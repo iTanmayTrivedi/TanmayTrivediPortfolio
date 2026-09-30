@@ -115,7 +115,7 @@ If you need one engineer who can own a feature end to end:
 
 ### **design → Postgres → ship → measure → 日本語化**
 
-[![Email me](https://img.shields.io/badge/💌tanmay.trivedi.jp@gmail.com-e94560?style=for-the-badge&labelColor=1a1a2e)](mailto:itanmaytrivedi@gmail.com)
+[![Email me](https://img.shields.io/badge/💌_tanmay.trivedi.jp@gmail.com-e94560?style=for-the-badge&labelColor=1a1a2e)](mailto:itanmaytrivedi@gmail.com)
 [![Portfolio & Resume](https://img.shields.io/badge/📄_Portfolio_%26_Resume-ff8fb3?style=for-the-badge&labelColor=1a1a2e)](https://tanmaytrivedi.dev)
 
 </div>
