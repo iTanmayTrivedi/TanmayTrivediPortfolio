@@ -2,8 +2,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { X } from "lucide-react";
 import Frame3D from "./Frame3D";
-import letterAsset from "@/assets/letter-new.png";
-const letterImg = letterAsset;
+import letterAsset from "@/assets/tanmay-trivedi-full-stack-developer-manifesto.jpg.asset.json";
+const letterImg = letterAsset.url;
 
 const LetterSection = () => {
   const [open, setOpen] = useState(false);
