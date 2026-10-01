@@ -1,7 +1,6 @@
 import { motion, useInView, useScroll, useTransform, useMotionValue, animate } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { useNavigate } from "react-router-dom";
 
 // LYNT — founder spotlight, Apple-keynote style.
 // Content sourced from JapanPath_CaseStudy_v2.pdf.
@@ -149,7 +148,6 @@ const Pillar = ({ p, language }: { p: (typeof pillars)[0]; language: "en" | "ja"
 // Main section ----------------------------------------------------------------
 const LyntSection = () => {
   const { language } = useLanguage();
-  const navigate = useNavigate();
   const sectionRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
   const isHeaderInView = useInView(headerRef, { once: true, margin: "-100px" });
@@ -544,8 +542,8 @@ const LyntSection = () => {
                     : "JapanPath — every product & engineering decision behind LYNT."}
                 </div>
               </div>
-              <motion.button
-                onClick={() => navigate("/projects/lynt")}
+              <motion.a
+                href="/projects/lynt"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.98 }}
                 className="group relative inline-flex items-center gap-4 bg-background text-foreground rounded-full pl-7 pr-3 py-3 text-sm sm:text-base font-medium tracking-tight shadow-none hover:shadow-[0_20px_60px_-20px_rgba(255,255,255,0.35)] transition-shadow duration-500"
@@ -566,7 +564,7 @@ const LyntSection = () => {
                     <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="1.5" />
                   </svg>
                 </span>
-              </motion.button>
+              </motion.a>
             </div>
           </div>
         </motion.div>
